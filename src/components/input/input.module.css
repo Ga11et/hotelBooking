@@ -1,0 +1,20 @@
+.field > input{
+    height: 44px;
+    width: 100%;
+    border: 1px solid var(--grey-25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: var(--grey-75);
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 15px;
+    margin-top: 5px;
+    outline: none;
+}
+.field > input::placeholder{
+    color: var(--grey-25);
+}
+.field > input:focus{
+    border-color: var(--grey-50);
+    color: var(--grey-75);
+}
