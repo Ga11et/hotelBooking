@@ -61,7 +61,12 @@
     align-self: center;
     justify-self: center;
 }
-.dropbox .dropdown .apply{
+.dropbox .dropdown .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dropbox .dropdown .buttons button{
     height: 30px;
     font-weight: 700;
     font-size: 12px;
@@ -71,10 +76,10 @@
     outline: none;
     border: 0px;
     background-color: transparent;
-    padding: 0 7px;
+    padding: 0 7px 0 15px;
     margin: 0;
-    align-self: flex-end;
 }
-.dropbox .dropdown .apply:hover{
+.dropbox .dropdown .apply:hover,
+.dropbox .dropdown .clear:hover{
     cursor: pointer;
 }
