@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3%;
+    padding: 0 0 5px 0;
 }
 .field .dates input{
     text-transform: uppercase;
