@@ -10,12 +10,15 @@ type props = {
 
 export const Dropdown: FC<props> = ({ type, id }) => {
 
-    const [itemsValue, setItemsValue] = useState(() => ({first: 2, second: 2, third: 0}))
+    const itemsStartValue = type === 'default' ? {first: 2, second: 2, third: 0} : {first: 0, second: 0, third: 0}
+    const buttonsStartValue = type === 'default' ? {first: false, second: false, third: true} : {first: true, second: true, third: true}
+
+    const [itemsValue, setItemsValue] = useState(() => itemsStartValue)
     const setItem1Value = (value: number) => setItemsValue( (actual) => ({ ...actual, first: value }))
     const setItem2Value = (value: number) => setItemsValue( (actual) => ({ ...actual, second: value }))
     const setItem3Value = (value: number) => setItemsValue( (actual) => ({ ...actual, third: value }))
 
-    const [buttonsDisabling, setButtonsDesabling] = useState( () => ({ first: false, second: false, third: true }))
+    const [buttonsDisabling, setButtonsDesabling] = useState( () => buttonsStartValue)
     const setButton1Disabled = (value: boolean) => setButtonsDesabling( (actual) => ({ ...actual, first: value }))
     const setButton2Disabled = (value: boolean) => setButtonsDesabling( (actual) => ({ ...actual, second: value }))
     const setButton3Disabled = (value: boolean) => setButtonsDesabling( (actual) => ({ ...actual, third: value }))
@@ -31,15 +34,24 @@ export const Dropdown: FC<props> = ({ type, id }) => {
         }, 600)
     }
     const clearOnClick = () => {
-        setItemsValue( (actual) => ({ ...actual, first: 2, second: 2, third: 0 }))
-        setButtonsDesabling( (actual) => ({ ...actual, first: false, second: false, third: true }))
+        setItemsValue( (actual) => ({ ...actual, first: 0, second: 0, third: 0 }))
+        setButtonsDesabling( (actual) => ({ ...actual, first: true, second: true, third: true }))
     }
+
+    const defaultValue = `${itemsValue.first} спальни, ${itemsValue.second} кровати, ${itemsValue.third} ванных`
+    const buttonsNumberValue = itemsValue.first + itemsValue.second + itemsValue.third
+    console.log(buttonsNumberValue)
+    const buttonsValueCondition = buttonsNumberValue % 10 > 4 || buttonsNumberValue % 10 === 0 || (buttonsNumberValue < 20 && buttonsNumberValue > 10)
+    console.log(buttonsValueCondition)
+    const buttonsModOneOption = buttonsNumberValue % 10 === 1 && (buttonsNumberValue > 20 || buttonsNumberValue < 10)
+    const buttonsStringValue = buttonsNumberValue.toString() + (buttonsModOneOption ? ' гость' : (buttonsValueCondition ? ' гостей' : ' гостя'))
+    console.log(buttonsStringValue)
 
     return <>
         <div className={css.dropbox}>
             <Input type='text'
-                placeholder="2 спальни, 2 кровати"
-                value={`${itemsValue.first} спальни, ${itemsValue.second} кровати, ${itemsValue.third} ванных`}
+                placeholder={type==='default' ? "2 спальни, 2 кровати, 0 ванных" : 'Сколько гостей'}
+                value={type==='default' ? defaultValue : buttonsStringValue}
                 onClick={inputOnClick}
                 readonly
                 isWithIndicator
@@ -50,17 +62,17 @@ export const Dropdown: FC<props> = ({ type, id }) => {
                 onMouseLeave={ type === 'buttons' ? undefined : applytOnClick }
                 >
 
-                <DropItem title="спальни"
+                <DropItem title={type==='default' ? "спальни" : 'взрослые'}
                     number={itemsValue.first}
                     setItemValue={setItem1Value}
                     isButtonDisabled={buttonsDisabling.first}
                     setButtonDisabling={setButton1Disabled} />
-                <DropItem title="кровати"
+                <DropItem title={type==='default' ? "кровати" : 'дети'}
                     number={itemsValue.second}
                     setItemValue={setItem2Value}
                     isButtonDisabled={buttonsDisabling.second}
                     setButtonDisabling={setButton2Disabled} />
-                <DropItem title="ванные комнаты"
+                <DropItem title={type==='default' ? "ванные комнаты" : 'младенцы'}
                     number={itemsValue.third}
                     setItemValue={setItem3Value}
                     isButtonDisabled={buttonsDisabling.third}
@@ -69,7 +81,7 @@ export const Dropdown: FC<props> = ({ type, id }) => {
                 {/* Buttons */}
 
                 {type === 'buttons' ? <div className={css.buttons}>
-                    {JSON.stringify(itemsValue) !== JSON.stringify({first: 2, second: 2, third: 0}) ? <button className={css.clear}
+                    {JSON.stringify(itemsValue) !== JSON.stringify({first: 0, second: 0, third: 0}) ? <button className={css.clear}
                             onClick={clearOnClick}>
                             очистить</button> : <div></div>}
                     <button className={css.apply}

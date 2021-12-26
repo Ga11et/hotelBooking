@@ -17,10 +17,10 @@ type date = Date | null
 export const DateInput: FC<props> = ({ id }) => {
 
     const today = new Date()
-    const tomorow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDay())
-    console.log(tomorow)
+    const tomorrow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDay())
+    console.log(tomorrow)
 
-    const [dates, setDates] = useState<{start: date, end: date}>( () => ({ start: today, end: tomorow }))
+    const [dates, setDates] = useState<{start: date, end: date}>( () => ({ start: today, end: tomorrow }))
 
     const openDataPicker = () => {
         $('#' + id).slideDown(400, 'swing')
@@ -35,9 +35,9 @@ export const DateInput: FC<props> = ({ id }) => {
         setDates({ start: start, end: end })
     };
 
-    return <div className={css.field} style={{ width: '40%' }} >
+    return <div className={css.field} >
         <div className={css.dates}>
-            <Input value={dates.start != null ? format(dates.start, 'yyyy-MM-dd') : undefined}
+            <Input value={dates.start != null ? format(dates.start, 'yyyy-MM-dd') : format(today, 'yyyy-MM-dd')}
                 id="leftDateInput"
                 placeholder="ДД.ММ.ГГГГ"
                 readonly
@@ -46,7 +46,7 @@ export const DateInput: FC<props> = ({ id }) => {
                 onFocus={openDataPicker}
                 isWithIndicator
                 />
-            <Input value={dates.end != null ? format(dates.end, 'yyyy-MM-dd') : undefined}
+            <Input value={dates.end != null ? format(dates.end, 'yyyy-MM-dd') : format(tomorrow, 'yyyy-MM-dd')}
                 id="rightDateInput"
                 placeholder="ДД.ММ.ГГГГ"
                 type='date'
@@ -56,7 +56,7 @@ export const DateInput: FC<props> = ({ id }) => {
                 isWithIndicator
                 />
         </div>
-        <div id={id} className={css.datePickerContainer} >
+        <div id={id} className={css.datePickerContainer} style={{ display: 'none' }}  >
             <DatePicker
                     locale='ru'
                     selected={dates.start}
@@ -71,7 +71,7 @@ export const DateInput: FC<props> = ({ id }) => {
 
             <div className={css.buttons}>
                 {JSON.stringify(dates) !== JSON.stringify({ start: new Date(), end: null }) ? <button className={css.clear}
-                        onClick={() => setDates({ start: today, end: tomorow })}>
+                        onClick={() => setDates({ start: today, end: tomorrow })}>
                         очистить</button> : <div></div>}
                 <button className={css.apply}
                     onClick={closeDataPicker}>
