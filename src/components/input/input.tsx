@@ -10,7 +10,7 @@ type props = {
     type: HTMLInputTypeAttribute
     placeholder: string,
 
-    onFocus?: (event: any) => JQuery<HTMLElement>
+    onFocus?: (event: any) => void
     onClick?: (event: any) => void
     onBlur?: (event: any) => JQuery<HTMLElement>
 }

@@ -6,7 +6,7 @@ export const App = () => {
   return (
     <div>
       <Input name="text field" type="email" placeholder="Email" />
-      <DateInput />
+      <DateInput id="dateInput" />
       <Dropdown type="buttons" id='first' />
       <Dropdown type="default" id='second' />
     </div>

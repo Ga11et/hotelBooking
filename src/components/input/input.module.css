@@ -1,4 +1,5 @@
 .field > input{
+    font-family: inherit;
     height: 44px;
     width: 100%;
     border: 1px solid var(--grey-25);
