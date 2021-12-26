@@ -8,7 +8,7 @@ type props = {
     readonly?: boolean
     isWithIndicator?: boolean
     type: HTMLInputTypeAttribute
-    placeholder: string,
+    placeholder?: string,
 
     onFocus?: (event: any) => void
     onClick?: (event: any) => void

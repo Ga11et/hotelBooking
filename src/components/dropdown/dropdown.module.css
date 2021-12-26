@@ -3,10 +3,10 @@
     border-radius: 4px 4px 0 0;
 }
 
-.dropbox{
+.dropdownContainer{
     width: 100%;
 }
-.dropbox .dropdown{
+.dropdownContainer .dropdown{
     background-color: white;
     position: absolute;
     width: inherit;
@@ -19,7 +19,7 @@
     border-radius: 0 0 4px 4px;
     transform: translate(0, -1px);
 }
-.dropbox .dropdown .dropItem{
+.dropdownContainer .dropdown .dropItem{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -27,7 +27,7 @@
     height: 30px;
     justify-content: space-between;
 }
-.dropbox .dropdown .dropItem label{
+.dropdownContainer .dropdown .dropItem label{
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -35,13 +35,13 @@
     text-transform: uppercase;
     padding: 0 15px;
 }
-.dropbox .dropdown .dropItem .itemChanging{
+.dropdownContainer .dropdown .dropItem .itemChanging{
     width: 92px;
     display: grid;
     grid-template-columns: 30px 32px 30px;
     padding: 0 7px;
 }
-.dropbox .dropdown .dropItem .itemChanging button{
+.dropdownContainer .dropdown .dropItem .itemChanging button{
     outline: none;
     background-color: transparent;
     border: 1px solid var(--grey-50);
@@ -50,23 +50,23 @@
     height: 30px;
     width: 30px;
 }
-.dropbox .dropdown .dropItem .itemChanging button:hover{
+.dropdownContainer .dropdown .dropItem .itemChanging button:hover{
     cursor: pointer;
 }
-.dropbox .dropdown .dropItem .itemChanging button:disabled{
+.dropdownContainer .dropdown .dropItem .itemChanging button:disabled{
     opacity: 0.5;
 }
-.dropbox .dropdown .dropItem .itemChanging label{
+.dropdownContainer .dropdown .dropItem .itemChanging label{
     display: flex;
     align-self: center;
     justify-self: center;
 }
-.dropbox .dropdown .buttons{
+.dropdownContainer .dropdown .buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.dropbox .dropdown .buttons button{
+.dropdownContainer .dropdown .buttons button{
     height: 30px;
     font-weight: 700;
     font-size: 12px;
@@ -79,7 +79,7 @@
     padding: 0 7px 0 15px;
     margin: 0;
 }
-.dropbox .dropdown .apply:hover,
-.dropbox .dropdown .clear:hover{
+.dropdownContainer .dropdown .apply:hover,
+.dropdownContainer .dropdown .clear:hover{
     cursor: pointer;
 }

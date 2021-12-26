@@ -38,17 +38,24 @@ export const Dropdown: FC<props> = ({ type, id }) => {
         setButtonsDesabling( (actual) => ({ ...actual, first: true, second: true, third: true }))
     }
 
+
+    const buttonsModOneCondition = (value: number) => {
+        return value % 10 === 1 && (value > 20 || value < 10)
+    }
+    const buttonsValueCondition = (value: number) => {
+        return value % 10 > 4 || value % 10 === 0 || (value < 20 && value > 10)
+    } 
+    const buttonsValueWithConditions = (value: number, optionOne: string, optionsTwo: string, optionThree: string) => {
+        return value.toString() + (buttonsModOneCondition(value) ? optionOne : (buttonsValueCondition(value) ? optionsTwo : optionThree))
+    }
+
     const defaultValue = `${itemsValue.first} спальни, ${itemsValue.second} кровати, ${itemsValue.third} ванных`
     const buttonsNumberValue = itemsValue.first + itemsValue.second + itemsValue.third
-    console.log(buttonsNumberValue)
-    const buttonsValueCondition = buttonsNumberValue % 10 > 4 || buttonsNumberValue % 10 === 0 || (buttonsNumberValue < 20 && buttonsNumberValue > 10)
-    console.log(buttonsValueCondition)
-    const buttonsModOneOption = buttonsNumberValue % 10 === 1 && (buttonsNumberValue > 20 || buttonsNumberValue < 10)
-    const buttonsStringValue = buttonsNumberValue.toString() + (buttonsModOneOption ? ' гость' : (buttonsValueCondition ? ' гостей' : ' гостя'))
-    console.log(buttonsStringValue)
+    const buttonsChildStringValue = itemsValue.third !== 0 ? ', ' + buttonsValueWithConditions(itemsValue.third, ' младенец', ' младенцев', ' младенца') : ''
+    const buttonsStringValue = buttonsValueWithConditions(buttonsNumberValue, ' гость', ' гостей', ' гостя')  + buttonsChildStringValue
 
     return <>
-        <div className={css.dropbox}>
+        <div className={css.dropdownContainer}>
             <Input type='text'
                 placeholder={type==='default' ? "2 спальни, 2 кровати, 0 ванных" : 'Сколько гостей'}
                 value={type==='default' ? defaultValue : buttonsStringValue}
