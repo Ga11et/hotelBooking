@@ -1,0 +1,44 @@
+.dropdownHandler{
+    display: flex;
+    align-items: center;
+    background: url('../../assets/datePicker.svg') calc(100% - 20px) no-repeat;
+    box-sizing: border-box;
+    height: 44px;
+    width: 100%;
+}
+.dropdownHandler.expanded{
+    background-image: url('../../assets/datePickerReverse.svg');
+}
+.dropdown{
+    display: grid;
+    grid-template-rows: repeat(20px, auto);
+    grid-gap: 10px;
+}
+.dropdown .checkbox{
+    display: block;
+    height: 20px;
+    color: var(--grey-50);
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dropdown .checkbox input{
+    display: none;
+    
+}
+.dropdown .checkbox .pseudo{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 10px 0 0;
+    border: 1px solid var(--grey-50);
+    border-radius: 4px;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+.dropdown .checkbox input:checked + .pseudo{
+    border: 1px solid var(--purple);
+    background: url('../../assets/checkedBox.svg') center no-repeat;
+}
