@@ -7,6 +7,7 @@ import { Options } from "./components/options/options"
 import { RichCkeckList } from "./components/richcheckboxlist/rickchecklist"
 import image1 from './assets/image1.svg'
 import image2 from './assets/image2.svg'
+import { LikeButton } from "./components/likebutton/likebutton"
 
 const richCheckboxData = [
   {label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.'},
@@ -29,6 +30,8 @@ export const App = () => {
       <RichCkeckList name="rich Checkbox Buttons" data={richCheckboxData} />
       <BulletList name="Bullet list" data={['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']} />
       <Options data={optionsData} />
+      <LikeButton isTouched={false} likes={14} />
+      <LikeButton isTouched={true} likes={8} />
     </div>
   )
 }

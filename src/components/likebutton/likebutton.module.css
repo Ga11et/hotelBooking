@@ -1,0 +1,32 @@
+.button,
+.activeButton{
+    border-radius: 10px;
+    height: 20px;
+    width: 40px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+    line-height: 12px;
+}
+.button:hover,
+.activeButton:hover{
+    cursor: pointer;
+}
+.button img,
+.activeButton img{
+    width: 20px;
+    object-fit: none;
+}
+.button{
+    border: 1px solid var(--grey-25);
+    color: var(--grey-25);
+}
+.activeButton{
+    border: 1px solid var(--purple);
+    color: var(--purple);
+}
+.button label:hover,
+.activeButton label:hover{
+    cursor: inherit;
+}

@@ -9,7 +9,7 @@ type props = {
 
 export const Options: FC<props> = ({ data }) => {
     return <section className={css.optionsContainer}>
-        {data.map( el => <Item data={el} />)}
+        {data.map( el => <Item key={el.name} data={el} />)}
     </section>
 }
 
