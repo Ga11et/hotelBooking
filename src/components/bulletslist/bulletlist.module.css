@@ -1,0 +1,15 @@
+.bulletListContainer{
+    width: 100%;
+}
+.bulletListContainer .bullets{
+    display: grid;
+    grid-gap: 10px;
+    padding-inline-start: 15px;
+}
+.bulletListContainer .bullet{
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--grey-75);
+    list-style-image: url('../../assets/bullet.svg');
+    padding-left: 10px;
+}

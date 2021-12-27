@@ -1,3 +1,4 @@
+import { BulletList } from "./components/bulletslist/bulletslist"
 import { CheckBoxList } from "./components/checkboxList/checkboxlist"
 import { DateInput } from "./components/datepicker/dateInput"
 import { Dropdown } from "./components/dropdown/dropdown"
@@ -19,6 +20,7 @@ export const App = () => {
       <DateInput id="dateInputNext" type="oneInput" />
       <CheckBoxList id="list" name="expandable checkbox list" list={['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка']} />
       <RichCkeckList name="rich Checkbox Buttons" data={richCheckboxData} />
+      <BulletList name="Bullet list" data={['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']} />
     </div>
   )
 }
