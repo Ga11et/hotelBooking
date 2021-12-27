@@ -3,6 +3,7 @@
   --grey-75: rgba(31, 32, 65, 0.75);
   --grey-50: rgba(31, 32, 65, 0.5);
   --grey-25: rgba(31, 32, 65, 0.25);
+  --grey-10: rgba(31, 32, 65, 0.1);
   --grey-5: rgba(31, 32, 65, 0.05);
   --purple: #BC9CFF;
   --green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);

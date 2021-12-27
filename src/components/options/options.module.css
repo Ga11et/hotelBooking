@@ -1,0 +1,26 @@
+.optionsContainer{
+    width: 100%;
+}
+.optionsContainer .item{
+    height: 90px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    border-bottom: 1px solid var(--grey-10);
+}
+.optionsContainer .item img{
+    align-self: center;
+}
+.optionsContainer .item .itemContent{
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--grey-75);
+    align-self: center;
+}
+.optionsContainer .item .itemContent h4{
+    font-weight: 700;
+    margin: 0;
+}
+.optionsContainer .item .itemContent p{
+    font-weight: 400;
+    margin: 0;
+}
