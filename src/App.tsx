@@ -2,6 +2,12 @@ import { CheckBoxList } from "./components/checkboxList/checkboxlist"
 import { DateInput } from "./components/datepicker/dateInput"
 import { Dropdown } from "./components/dropdown/dropdown"
 import { Input } from "./components/input/input"
+import { RichCkeckList } from "./components/richcheckboxlist/rickchecklist"
+
+const richCheckboxData = [
+  {label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.'},
+  {label: 'Помощник для инвалидов', describtion: 'На 1 этаже вас встретит специалист  и проводит до номера.'},
+]
 
 export const App = () => {
   return (
@@ -12,6 +18,7 @@ export const App = () => {
       <Dropdown type="default" id='second' />
       <DateInput id="dateInputNext" type="oneInput" />
       <CheckBoxList id="list" name="expandable checkbox list" list={['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка']} />
+      <RichCkeckList name="rich Checkbox Buttons" data={richCheckboxData} />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import css from './checkboxlist.module.css'
 import $ from 'jquery'
+import { Checkbox } from "../checkbox/checkbox";
 
 type props = {
     id: string
@@ -24,7 +25,7 @@ export const CheckBoxList: FC<props> = ({ name, list, id }) => {
         }
     }
 
-    return <>
+    return <section className={css.expandableChecksContainer}>
         <div className={css.dropdownHandler}
             id={id + 'handler'}
             onClick={handlerOnClick} >
@@ -33,20 +34,19 @@ export const CheckBoxList: FC<props> = ({ name, list, id }) => {
         <div className={css.dropdown}
             style={{ display: 'none' }}
             id={id} >
-            {list.map( el => <Checkbox key={el} label={el} />)}
+            {list.map( el => <CheckboxContainer key={el} label={el} />)}
         </div>
-    </>
+    </section>
 }
 
 type checkboxProps = {
     label: string
 }
 
-const Checkbox: FC<checkboxProps> = ({ label }) => {
+const CheckboxContainer: FC<checkboxProps> = ({ label }) => {
     return <>
         <label className={css.checkbox}>
-            <input type='checkbox' name={label} />
-            <span className={css.pseudo}></span>
+            <Checkbox label={label} />
             {label}
         </label>
     </>

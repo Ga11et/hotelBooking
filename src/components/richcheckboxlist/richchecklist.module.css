@@ -1,0 +1,22 @@
+.richCkecksContainer{
+    width: 100%;
+}
+.richCkecksContainer h3{
+    padding-bottom: 16px;
+}
+.richCkecksContainer .checkbox{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--grey-75);
+}
+.richCkecksContainer .checkbox .checkboxData p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--grey-50);
+    margin: 0;
+    padding: 5px 0 10px;
+}
