@@ -30,7 +30,7 @@ const commentData: data = {
 export const App = () => {
   return (
     <div>
-      <Input name="text field" type="email" placeholder="Email" />
+      <Input fieldType="default" name="text field" type="email" placeholder="Email" />
       <DateInput id="dateInput" type="twoInputs" />
       <Dropdown type="buttons" id='first' />
       <Dropdown type="default" id='second' />

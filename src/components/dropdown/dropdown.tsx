@@ -56,7 +56,7 @@ export const Dropdown: FC<props> = ({ type, id }) => {
 
     return <>
         <div className={css.dropdownContainer}>
-            <Input type='text'
+            <Input fieldType="default" type='text'
                 placeholder={type==='default' ? "2 спальни, 2 кровати, 0 ванных" : 'Сколько гостей'}
                 value={type==='default' ? defaultValue : buttonsStringValue}
                 onClick={inputOnClick}

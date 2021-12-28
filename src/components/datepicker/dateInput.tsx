@@ -44,7 +44,7 @@ export const DateInput: FC<props> = ({ id, type }) => {
 
     return <div className={css.field} >
         {type==='twoInputs' ? <div className={css.dates}>
-            <Input value={dates.start != null ? format(dates.start, 'yyyy-MM-dd') : format(today, 'yyyy-MM-dd')}
+            <Input fieldType="default" value={dates.start != null ? format(dates.start, 'yyyy-MM-dd') : format(today, 'yyyy-MM-dd')}
                 id="leftDateInput"
                 readonly
                 type='date'
@@ -52,7 +52,7 @@ export const DateInput: FC<props> = ({ id, type }) => {
                 onFocus={openDataPicker}
                 isWithIndicator
                 />
-            <Input value={dates.end != null ? format(dates.end, 'yyyy-MM-dd') : format(tomorrow, 'yyyy-MM-dd')}
+            <Input fieldType="default" value={dates.end != null ? format(dates.end, 'yyyy-MM-dd') : format(tomorrow, 'yyyy-MM-dd')}
                 id="rightDateInput"
                 type='date'
                 readonly
@@ -62,7 +62,7 @@ export const DateInput: FC<props> = ({ id, type }) => {
                 />
         </div>
         : <div>
-             <Input value={oneInputValue(dates)}
+             <Input fieldType="default" value={oneInputValue(dates)}
                 id="leftDateInput"
                 readonly
                 type='text'
