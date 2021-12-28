@@ -234,26 +234,59 @@ body {
   background-size: 100% 100%;
 }
 
-/* .react-datepicker__day--keyboard-selected,
-.react-datepicker__month-text--keyboard-selected,
-.react-datepicker__quarter-text--keyboard-selected,
-.react-datepicker__year-text--keyboard-selected{
-  background-color: var(--gradient);
-  border-radius: 50%;
-  border: 0px;
-  outline: none;
-} 
-.react-datepicker__day--keyboard-selected:hover{ 
-  background-color: var(--gradient);
+/* Slider Style */
+.rc-slider {
+  position: relative;
+  height: 14px;
+  padding: 20px 0;
+  width: 100%;
+  border-radius: 6px;
+  touch-action: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.react-datepicker__day--selected{
+.rc-slider-rail {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  height: 6px;
+  border: 1px solid var(--grey-25);
+  border-radius: 3px;
+}
+.rc-slider-track {
+  position: absolute;
+  left: 0;
+  height: 6px;
+  border-radius: 0;
+  background: var(--green);
+}
+.rc-slider-handle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  cursor: grab;
   border-radius: 50%;
-  background: var(--gradient-25), var(--gradient);
-  outline: none;
-} */
-
-
-
+  border: 2px solid white;
+  background: var(--green);
+  touch-action: pan-x;
+}
+.rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging{
+  border-color: white;
+  box-shadow: unset;
+}
+.rc-slider-handle-click-focused{
+  border-color: white;
+  box-shadow: unset;
+}
+.rc-slider-handle-click-focused:focus{
+  border-color: white;
+  box-shadow: unset;
+}
+.rc-slider-handle:hover{
+  border-color: white;
+  box-shadow: unset;
+}
 
 
 
