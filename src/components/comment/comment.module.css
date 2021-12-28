@@ -1,0 +1,22 @@
+.commentContainer{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px auto;
+    grid-gap: 10px;
+}
+.commentContainer > img{
+    width: 100%;
+}
+.commentContainer .authorContainer label{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--grey-75);
+}
+.commentContainer p{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--grey-75);
+    margin: 0;
+}

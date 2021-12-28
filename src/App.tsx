@@ -7,16 +7,25 @@ import { Options } from "./components/options/options"
 import { RichCkeckList } from "./components/richcheckboxlist/rickchecklist"
 import image1 from './assets/image1.svg'
 import image2 from './assets/image2.svg'
-import { LikeButton } from "./components/likebutton/likebutton"
+import person1 from './assets/person1.jpg'
+import { Comment, data } from "./components/comment/comment"
 
 const richCheckboxData = [
-  {label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.'},
-  {label: 'Помощник для инвалидов', describtion: 'На 1 этаже вас встретит специалист  и проводит до номера.'},
+  { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
+  { label: 'Помощник для инвалидов', describtion: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
 ]
 const optionsData = [
-  {image: image1, name: 'Комфорт', describtion: 'Шумопоглощающие стены'},
-  {image: image2, name: 'Удобство', describtion: 'Окно в каждой из спален'}
+  { image: image1, name: 'Комфорт', describtion: 'Шумопоглощающие стены' },
+  { image: image2, name: 'Удобство', describtion: 'Окно в каждой из спален' }
 ]
+const commentData: data = {
+  avatar: person1,
+  isTouched: true,
+  likes: 12,
+  message: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+  name: 'Мурад Сарафанов',
+  publication: new Date(2021, 11, 20)
+}
 
 export const App = () => {
   return (
@@ -30,8 +39,7 @@ export const App = () => {
       <RichCkeckList name="rich Checkbox Buttons" data={richCheckboxData} />
       <BulletList name="Bullet list" data={['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']} />
       <Options data={optionsData} />
-      <LikeButton isTouched={false} likes={14} />
-      <LikeButton isTouched={true} likes={8} />
+      <Comment data={commentData} />
     </div>
   )
 }

@@ -7,15 +7,16 @@ type props = {
     value?: string
     readonly?: boolean
     isWithIndicator?: boolean
+    placeholder?: string
     type: HTMLInputTypeAttribute
-    placeholder?: string,
+    fieldType: 'default' | 'masked' | 'subscribtion'
 
-    onFocus?: (event: any) => void
-    onClick?: (event: any) => void
-    onBlur?: (event: any) => JQuery<HTMLElement>
+
+    onFocus?: React.FocusEventHandler<HTMLInputElement> | undefined
+    onClick?: React.MouseEventHandler<HTMLInputElement> | undefined
 }
 
-export const Input: FC<props> = ({name, type, placeholder, onClick, id, value, onBlur, onFocus, readonly = false, isWithIndicator = false}) => {
+export const Input: FC<props> = ({name, type, placeholder, onClick, id, value, onFocus, readonly = false, isWithIndicator = false}) => {
     return <div className={css.field}>
         {name && <h3>{name}</h3>}
         <input type={type}
@@ -23,7 +24,6 @@ export const Input: FC<props> = ({name, type, placeholder, onClick, id, value, o
             placeholder={placeholder}
             onClick={onClick && onClick}
             onFocus={onFocus && onFocus}
-            onBlur={onBlur && onBlur}
             id={id && id}
             value={value !== undefined ? value : undefined}
             className={isWithIndicator ? css.withIndicator : undefined} />

@@ -10,12 +10,12 @@ type props = {
 
 export const LikeButton:FC<props> = ({ likes, isTouched }) => {
     return <>
-        {isTouched ? <div className={css.button}>
-            <img src={emptyLike} alt="likeImage" />
+        {isTouched ? <div className={css.activeButton}>
+            <img src={filledLike} alt="likeImage" />
             <label>{likes}</label>
         </div>
-        : <div className={css.activeButton}>
-            <img src={filledLike} alt="likeImage" />
+        : <div className={css.button}>
+            <img src={emptyLike} alt="likeImage" />
             <label>{likes}</label>
         </div>}
     </>
