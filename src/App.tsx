@@ -10,6 +10,7 @@ import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
 import { Comment, data } from "./components/comment/comment"
 import { RadioButton } from './components/radiobutton/radiobutton'
+import { ToggleButton } from "./components/togglebutton/togglebutton"
 
 const richCheckboxData = [
   { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
@@ -46,6 +47,7 @@ export const App = () => {
       <RadioButton name="some" label="Мужчина" />
       <RadioButton name="some" label="Женщина" />
       <RadioButton name="some" label="Человек" />
+      <ToggleButton label="Получать сепцпредложения" name="some2" />
     </div>
   </>
 }

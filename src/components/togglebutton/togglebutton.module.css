@@ -1,0 +1,61 @@
+@keyframes toggleRight {
+    0%{
+        left: 0;
+        right: 20px;
+    }
+    100%{
+        right: 0;
+        left: 20px;
+    }
+}
+@keyframes toggleLeft {
+    0%{
+        left: 20px;
+        right: 0px;
+    }
+    100%{
+        right: 20px;
+        left: 0px;
+    }
+}
+
+.toggleContainer{
+    display: flex;
+    align-items: center;
+}
+.toggleContainer > input{
+    display: none;
+}
+.toggleContainer > span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    border: 1px solid var(--grey-25);
+    border-radius: 10px;
+    position: relative;
+}
+.toggleContainer > span > span{
+    box-sizing: border-box;
+    background: var(--grey-25);
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    animation: toggleLeft 400ms 1 forwards;
+}
+.toggleContainer > p{
+    padding-left: 10px;
+    color: var(--grey-75);
+    font-size: 14px;
+    line-height: 24px;
+}
+.toggleContainer input:checked ~ span{
+    border-color: var(--purple);
+}
+.toggleContainer input:checked ~ span > span{
+    background: var(--gradient);
+    animation: toggleRight 400ms 1 forwards;
+}
