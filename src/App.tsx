@@ -13,6 +13,7 @@ import { RadioButton } from './components/radiobutton/radiobutton'
 import { ToggleButton } from "./components/togglebutton/togglebutton"
 import { RateButton } from "./components/ratebutton/ratebutton"
 import { MySlider } from "./components/slider/slider"
+import { Button } from "./components/button/button"
 
 const richCheckboxData = [
   { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
@@ -52,6 +53,9 @@ export const App = () => {
       <ToggleButton label="Получать сепцпредложения" name="some2" />
       <RateButton countStars={3} />
       <MySlider name="Range Slider" />
+      <Button text="Click me" type="filled" onClick={() => console.log('clicked')} />
+      <Button text="Click me" type="empty" onClick={() => console.log('clicked')} />
+      <Button text="Click me" type="link" onClick={() => console.log('clicked')} />
     </div>
   </>
 }

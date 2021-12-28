@@ -24,7 +24,6 @@ export const MySlider: FC<props> = ({ name }) => {
             <Range onChange={rangeOnChange}
                 defaultValue={[25,70]} />
         </div>
-        <div style={{ height: '1000px' }}></div>
     </section>
     
 }
