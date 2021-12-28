@@ -1,0 +1,10 @@
+.starsContainer{
+    width: 120px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.starsContainer img:hover{
+    cursor: pointer;
+}
