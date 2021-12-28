@@ -24,4 +24,18 @@
     background-image: url('../../assets/datePicker.svg');
     background-position: calc(100% - 20px) 50%;
     background-repeat: no-repeat;
-  }
+}
+.field > .subscribtion{
+    opacity: 1;
+    background-image: url('../../assets/arrowRDatePicker.svg');
+    background-position: calc(100% - 16px) 50%;
+    background-repeat: no-repeat;
+}
+.field > .masked{
+    text-transform: uppercase;
+    color: var(--grey-25);
+}
+.field > .maskedTouched{
+    text-transform: uppercase;
+    color: var(--grey-75);
+}

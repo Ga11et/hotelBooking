@@ -47,10 +47,7 @@ body {
 /* #### Calendar style #### */
 
 ::-webkit-calendar-picker-indicator{
-  opacity: 1;
-  background-image: url('./assets/datePicker.svg');
-  background-position: center;
-  width: 0.75rem;
+  opacity: 0;
 }
 /* Containers */
 .react-datepicker-popper{

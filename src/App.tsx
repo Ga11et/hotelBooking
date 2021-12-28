@@ -40,6 +40,8 @@ export const App = () => {
       <BulletList name="Bullet list" data={['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']} />
       <Options data={optionsData} />
       <Comment data={commentData} />
+      <Input fieldType="subscribtion" type='email' />
+      <Input placeholder="ДД.ММ.ГГГГ" name="masked text field" fieldType="masked" type='date' />
     </div>
   )
 }
