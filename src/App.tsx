@@ -9,6 +9,7 @@ import image1 from './assets/image1.svg'
 import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
 import { Comment, data } from "./components/comment/comment"
+import { RadioButton } from './components/radiobutton/radiobutton'
 
 const richCheckboxData = [
   { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
@@ -28,7 +29,7 @@ const commentData: data = {
 }
 
 export const App = () => {
-  return (
+  return <>
     <div>
       <Input fieldType="default" name="text field" type="email" placeholder="Email" />
       <DateInput id="dateInput" type="twoInputs" />
@@ -42,7 +43,10 @@ export const App = () => {
       <Comment data={commentData} />
       <Input fieldType="subscribtion" type='email' />
       <Input placeholder="ДД.ММ.ГГГГ" name="masked text field" fieldType="masked" type='date' />
+      <RadioButton name="some" label="Мужчина" />
+      <RadioButton name="some" label="Женщина" />
+      <RadioButton name="some" label="Человек" />
     </div>
-  )
+  </>
 }
 
