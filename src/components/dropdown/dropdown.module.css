@@ -5,9 +5,11 @@
 
 .dropdownContainer{
     width: 100%;
+    position: relative;
 }
 .dropdownContainer .dropdown{
     background-color: white;
+    z-index: 1;
     position: absolute;
     width: inherit;
     display: flex;

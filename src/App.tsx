@@ -1,20 +1,8 @@
-import { BulletList } from "./components/bulletslist/bulletslist"
-import { CheckBoxList } from "./components/checkboxList/checkboxlist"
-import { DateInput } from "./components/datepicker/dateInput"
-import { Dropdown } from "./components/dropdown/dropdown"
-import { Input } from "./components/input/input"
-import { Options } from "./components/options/options"
-import { RichCkeckList } from "./components/richcheckboxlist/rickchecklist"
 import image1 from './assets/image1.svg'
 import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
-import { Comment, data } from "./components/comment/comment"
-import { RadioButton } from './components/radiobutton/radiobutton'
-import { ToggleButton } from "./components/togglebutton/togglebutton"
-import { RateButton } from "./components/ratebutton/ratebutton"
-import { MySlider } from "./components/slider/slider"
-import { Button } from "./components/button/button"
-import { Paginator } from "./components/pagination/paginator"
+import { data } from "./components/comment/comment"
+import { FindRooms } from './templates/findrooms/findrooms'
 
 const richCheckboxData = [
   { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
@@ -36,29 +24,9 @@ const commentData: data = {
 export const App = () => {
   return <>
     <div>
-      <Input fieldType="default" name="text field" type="email" placeholder="Email" />
-      <DateInput id="dateInput" type="twoInputs" />
-      <Dropdown type="buttons" id='first' />
-      <Dropdown type="default" id='second' />
-      <DateInput id="dateInputNext" type="oneInput" />
-      <CheckBoxList id="list" name="expandable checkbox list" list={['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка']} />
-      <RichCkeckList name="rich Checkbox Buttons" data={richCheckboxData} />
-      <BulletList name="Bullet list" data={['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']} />
-      <Options data={optionsData} />
-      <Comment data={commentData} />
-      <Input fieldType="subscribtion" type='email' />
-      <Input placeholder="ДД.ММ.ГГГГ" name="masked text field" fieldType="masked" type='date' />
-      <RadioButton name="some" label="Мужчина" />
-      <RadioButton name="some" label="Женщина" />
-      <RadioButton name="some" label="Человек" />
-      <ToggleButton label="Получать сепцпредложения" name="some2" />
-      <RateButton countStars={3} />
-      <MySlider name="Range Slider" />
-      <Button text="Click me" type="filled" onClick={() => console.log('clicked')} />
-      <Button text="Click me" type="empty" onClick={() => console.log('clicked')} />
-      <Button text="Click me" type="link" onClick={() => console.log('clicked')} />
-      <Button text="Перейти к оплате" type="big" onClick={() => console.log('clicked')} />
-      <Paginator pageCount={15} handlePageClick={() => console.log('pageChanged')} />
+      <FindRooms id='findform' 
+        onClick={() => console.log('clicked')}
+        title='Найдём номера под ваши пожелания' />
     </div>
   </>
 }

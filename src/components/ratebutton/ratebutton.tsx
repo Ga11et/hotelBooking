@@ -6,16 +6,14 @@ import emptyStar from '../../assets/emptyStar.svg'
 
 type props = {
     countStars: number
+
+    handleClick: (nubmer: number) => void
 }
 
-export const RateButton: FC<props> = ({ countStars }) => {
+export const RateButton: FC<props> = ({ countStars, handleClick }) => {
 
     const [localCountStars, setLocalCountStars] = useState(() => countStars)
     const stars = [1, 2, 3, 4, 5]
-    
-    const callback = (value: number) => {
-        console.log(value)
-    }
 
     return <section className={css.starsContainer}>
         {stars.map(el => <img key={el} id={el.toString()}
@@ -23,6 +21,6 @@ export const RateButton: FC<props> = ({ countStars }) => {
             alt="star"
             onMouseOver={() => setLocalCountStars(el)}
             onMouseLeave={() => setLocalCountStars(countStars)}
-            onClick={() => callback(el)} />)}
+            onClick={() => handleClick(el)} />)}
     </section>
-}
+} 

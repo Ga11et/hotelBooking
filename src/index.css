@@ -18,6 +18,7 @@ h1{
   font-size: 24px;
   line-height: 29px;
   color: var(--grey-100);
+  margin: 0;
 }
 h2{
   font-weight: bold;
@@ -30,8 +31,9 @@ h3{
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  margin: 0;
   color: var(--grey-100);
+  margin: 0;
+  padding: 21px 0 5px
 }
 
 body {
@@ -48,7 +50,7 @@ body {
 /* #### Calendar style #### */
 
 ::-webkit-calendar-picker-indicator{
-  opacity: 0;
+  display: none;
 }
 /* Containers */
 .react-datepicker-popper{

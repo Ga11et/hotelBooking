@@ -3,9 +3,9 @@ import css from './input.module.css'
 import $ from 'jquery'
 
 type props = {
-    name?: string
+    title?: string
     id?: string
-    value?: string
+    customValue?: string
     readonly?: boolean
     isWithIndicator?: boolean
     placeholder?: string
@@ -17,8 +17,8 @@ type props = {
     onClick?: React.MouseEventHandler<HTMLInputElement> | undefined
 }
 
-export const Input: FC<props> = ({ fieldType, name, type, placeholder, onClick, id, value, onFocus, readonly = false, isWithIndicator = false}) => {
-    if  (fieldType === 'masked') {
+export const Input: FC<props> = ({ title, fieldType, type, placeholder, onClick, id, customValue, onFocus, readonly = false, isWithIndicator = false }) => {
+    if (fieldType === 'masked') {
 
         const maskedOnFocus = () => {
             $('.' + css.masked).addClass(css.maskedTouched)
@@ -26,8 +26,9 @@ export const Input: FC<props> = ({ fieldType, name, type, placeholder, onClick, 
 
         }
 
+
         return <div className={css.field}>
-            {name && <h3>{name}</h3>}
+            {title && <h3>{title}</h3>}
             <input type={type}
                 readOnly={readonly}
                 placeholder={placeholder}
@@ -35,30 +36,32 @@ export const Input: FC<props> = ({ fieldType, name, type, placeholder, onClick, 
                 onFocus={maskedOnFocus}
                 id={id && id}
                 maxLength={8}
-                value={value && value}
+                value={customValue}
                 className={css.masked} />
-            </div>
+        </div>
     }
-    if  (fieldType === 'subscribtion') return <div className={css.field}>
-    {name && <h3>{name}</h3>}
-    <input type={type}
-        readOnly={readonly}
-        placeholder={placeholder}
-        onClick={onClick && onClick}
-        onFocus={onFocus && onFocus}
-        id={id && id}
-        value={value !== undefined ? value : undefined}
-        className={css.subscribtion} />
+    if (fieldType === 'subscribtion') return <div className={css.field}>
+        {title && <h3>{title}</h3>}
+        <input type={type}
+            readOnly={readonly}
+            placeholder={placeholder}
+            onClick={onClick && onClick}
+            onFocus={onFocus && onFocus}
+            id={id && id}
+            value={customValue}
+            className={css.subscribtion} />
     </div>
+
     return <div className={css.field}>
-    {name && <h3>{name}</h3>}
-    <input type={type}
-        readOnly={readonly}
-        placeholder={placeholder}
-        onClick={onClick && onClick}
-        onFocus={onFocus && onFocus}
-        id={id && id}
-        value={value !== undefined ? value : undefined}
-        className={isWithIndicator ? css.withIndicator : undefined} />
+        {title && <h3>{title}</h3>}
+        <input
+            readOnly={readonly}
+            placeholder={placeholder}
+            onClick={onClick && onClick}
+            onFocus={onFocus && onFocus}
+            id={id && id}
+            value={customValue}
+            className={isWithIndicator ? css.withIndicator : undefined}
+        />
     </div>
 }

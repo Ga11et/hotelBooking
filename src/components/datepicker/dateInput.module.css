@@ -1,16 +1,19 @@
 .field{
-    width: 40%;
+    width: 100%;
+    position: relative;
 }
 .field .dates{
     display: grid;
-    grid-template-columns: 48% 48%;
-    grid-gap: 4%;
-    padding: 0 0 5px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 0;
 }
 .field .dates input{
     text-transform: uppercase;
 }
 .field .datePickerContainer{
+    z-index: 2;
+    background: white;
     position: absolute;
     box-sizing: border-box;
     width: inherit;
