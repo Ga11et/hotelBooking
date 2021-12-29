@@ -14,6 +14,7 @@ import { ToggleButton } from "./components/togglebutton/togglebutton"
 import { RateButton } from "./components/ratebutton/ratebutton"
 import { MySlider } from "./components/slider/slider"
 import { Button } from "./components/button/button"
+import { Paginator } from "./components/pagination/paginator"
 
 const richCheckboxData = [
   { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
@@ -57,6 +58,7 @@ export const App = () => {
       <Button text="Click me" type="empty" onClick={() => console.log('clicked')} />
       <Button text="Click me" type="link" onClick={() => console.log('clicked')} />
       <Button text="Перейти к оплате" type="big" onClick={() => console.log('clicked')} />
+      <Paginator pageCount={15} handlePageClick={() => console.log('pageChanged')} />
     </div>
   </>
 }

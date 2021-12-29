@@ -14,6 +14,7 @@
     "@types/react-dom": "^17.0.11",
     "framer-motion": "^4.1.17",
     "jquery": "^3.6.0",
+    "rc-pagination": "^3.1.14",
     "rc-slider": "^9.7.5",
     "react": "^17.0.2",
     "react-datepicker": "^4.5.0",

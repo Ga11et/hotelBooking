@@ -1,6 +1,6 @@
 import { FC } from "react";
 import css from './button.module.css'
-import arrow from '../../assets/whiteLeftArrow.svg'
+import arrow from '../../assets/whiteRightArrow.svg'
 
 type props = {
     text: string

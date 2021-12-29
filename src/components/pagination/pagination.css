@@ -1,0 +1,64 @@
+.rc-pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    font-size: 12px;
+}
+.rc-pagination-total-text{
+    position: absolute;
+    top: 51px;
+    font-size: 14px;
+    color: var(--grey-75);
+    list-style: none;
+}
+.rc-pagination-prev,
+.rc-pagination-next{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: var(--green);
+    border: 0;
+    border-radius: 50%;
+}
+.rc-pagination-disabled,
+.rc-pagination-disabled{
+    display: none;
+}
+.rc-pagination-prev img,
+.rc-pagination-next img{
+    width: 45%;
+}
+.rc-pagination-item,
+.rc-pagination-jump-next,
+.rc-pagination-jump-prev{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--grey-50);
+    border: 0;
+    border-radius: 50%;
+}
+.rc-pagination-item:hover,
+.rc-pagination-jump-next:hover,
+.rc-pagination-jump-prev:hover,
+.rc-pagination-prev:hover,
+.rc-pagination-next:hover{
+    cursor: pointer;
+}
+.rc-pagination-item:hover{
+    background: var(--gradient-50);
+}
+.rc-pagination-item-active{
+    background: var(--gradient);
+    color: white;
+    font-weight: 700;
+}
+.rc-pagination-options{
+    display: none;
+}
