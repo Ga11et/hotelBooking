@@ -45,3 +45,26 @@
     cursor: pointer;
     color: var(--grey-50);
 }
+.payment{
+    width: 100%;
+    height: 44px;
+    border: 0;
+    border-radius: 22px;
+    background: var(--gradient);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.payment > img{
+    position: absolute;
+    right: 12px;
+}
+.payment:hover{
+    cursor: pointer;
+}

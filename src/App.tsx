@@ -56,6 +56,7 @@ export const App = () => {
       <Button text="Click me" type="filled" onClick={() => console.log('clicked')} />
       <Button text="Click me" type="empty" onClick={() => console.log('clicked')} />
       <Button text="Click me" type="link" onClick={() => console.log('clicked')} />
+      <Button text="Перейти к оплате" type="big" onClick={() => console.log('clicked')} />
     </div>
   </>
 }
