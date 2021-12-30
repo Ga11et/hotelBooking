@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { Input } from "../input/input";
 import css from './dropdown.module.css'
 import $ from 'jquery'
-import { Field } from "formik";
+import { Field, FieldProps } from "formik";
 
 type props = {
     type: 'buttons' | 'default'
@@ -69,7 +69,7 @@ export const Dropdown: FC<props> = ({ name, type, id, title }) => {
         <div className={css.dropdownContainer}>
             <h3>{title}</h3>
             <Field name={name} >
-                {({ form: { setFieldValue } }: any) => {
+                {({ form: { setFieldValue } }: FieldProps) => {
 
                     const applytOnClickAlt = () => {
                         setFieldValue(name, itemsValue)

@@ -11,7 +11,8 @@ type props = {
 export const Enter: FC<props> = ({ title }) => {
 
     const initialValues = {
-
+        email: '',
+        password: ''
     }
 
     return <section className={css.enterContainer}>

@@ -2,6 +2,7 @@ import image1 from './assets/image1.svg'
 import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
 import { data } from "./components/comment/comment"
+import { Booking } from './templates/booking/booking'
 import { Enter } from './templates/enter/enter'
 import { FindRooms } from './templates/findrooms/findrooms'
 import { Register } from './templates/register/register'
@@ -26,11 +27,10 @@ const commentData: data = {
 export const App = () => {
   return <>
     <div>
-      <FindRooms id='findform' 
-        onClick={() => console.log('clicked')}
-        title='Найдём номера под ваши пожелания' />
-      <Register title='Регистрация аккаунта' />
-      <Enter title='Войти' />
+      <Booking isLux price={9990} 
+        roomNumber='888'
+        adds={300}
+        discount={2179} />
     </div>
   </>
 }

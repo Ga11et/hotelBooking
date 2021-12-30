@@ -1,0 +1,88 @@
+.bookingContainer{
+    width: 380px;
+    border: 1px solid var(--grey-10) ;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+.bookingContainer form{
+    padding: 40px 30px 30px;
+}
+.bookingContainer form .bookingHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.bookingContainer form .bookingHeader .roomNumber .numChar{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--grey-100);
+}
+.bookingContainer form .bookingHeader .roomNumber .number{
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--grey-100);
+}
+.bookingContainer form .bookingHeader .roomNumber .lux{
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--purple);
+    text-transform: uppercase;
+}
+.bookingContainer form .bookingHeader .perDay > label{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--grey-50);
+}
+.bookingContainer form .bookingHeader .perDay .price{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--grey-50);
+}
+.bookingContainer form .addInfoContainer{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    padding: 20px 0 30px;
+}
+.bookingContainer form .addInfoContainer .additionalInfo{
+    display: grid;
+    grid-template-columns: 68% 1fr 1fr;
+}
+.bookingContainer form .addInfoContainer .additionalInfo .addPrice{
+    text-align: right;
+}
+.bookingContainer form .addInfoContainer .additionalInfo > label{
+    line-height: 18px;
+}
+.bookingContainer form .addInfoContainer .additionalInfo > label > span{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: var(--grey-25);
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid var(--grey-25);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-2px);
+}
+.bookingContainer form .addInfoContainer .additionalInfo > label > span:hover{
+    cursor: pointer;
+}
+.bookingContainer form .resultContainer{
+    display: grid;
+    grid-template-columns: max-content auto max-content;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--grey-100);
+}
+.bookingContainer form .resultContainer .between{
+    border-bottom: 1px dashed var(--grey-25);
+    box-sizing: border-box;
+    transform: translateY(-4px);
+}
+.bookingContainer form > button{
+    margin-top: 20px;
+}

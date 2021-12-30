@@ -1,11 +1,11 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import css from './dateInput.module.css'
 import $ from 'jquery'
 import DatePicker, { registerLocale } from 'react-datepicker'
 import { Input } from "../input/input";
 import ru from 'date-fns/locale/ru'
 import { format } from 'date-fns'
-import { Field } from "formik";
+import { Field, FieldProps } from "formik";
 
 registerLocale('ru', ru)
 
@@ -13,16 +13,25 @@ type props = {
     id: string
     name: string
     type: 'oneInput' | 'twoInputs'
+
+    setDays?: (days: number) => void
 }
 
 type date = Date | null
 
-export const DateInput: FC<props> = ({ name, id, type }) => {
+export const DateInput: FC<props> = ({ name, id, type, setDays }) => {
 
     const today = new Date()
     const tomorrow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDay())
 
     const [dates, setDates] = useState<{ start: date, end: date }>(() => ({ start: null, end: null }))
+
+    useEffect(() => {
+        if (setDays && dates.start !== null && dates.end !== null) {
+            setDays(dates.end.getDate() - dates.start.getDate())
+        }
+    }, [dates])
+    
 
     const openDataPicker = () => {
         $('#' + id).slideDown(400, 'swing')
@@ -44,7 +53,7 @@ export const DateInput: FC<props> = ({ name, id, type }) => {
 
     return <div className={css.field} >
         <Field name={name} >
-            {({ form: { setFieldValue } }: any) => {
+            {({ form: { setFieldValue } }: FieldProps) => {
 
                 const closeDataPickerAlt = () => {
                     setFieldValue(name, dates)
