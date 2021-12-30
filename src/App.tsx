@@ -3,6 +3,7 @@ import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
 import { data } from "./components/comment/comment"
 import { FindRooms } from './templates/findrooms/findrooms'
+import { Register } from './templates/register/register'
 
 const richCheckboxData = [
   { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
@@ -27,6 +28,7 @@ export const App = () => {
       <FindRooms id='findform' 
         onClick={() => console.log('clicked')}
         title='Найдём номера под ваши пожелания' />
+      <Register title='Регистрация аккаунта' />
     </div>
   </>
 }

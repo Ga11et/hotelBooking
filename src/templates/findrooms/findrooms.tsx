@@ -17,10 +17,8 @@ export const FindRooms: FC<props> = ({ id, title, onClick }) => {
         <Formik
             initialValues={{ findRooms: {}, guests: '' }}
             onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values));
-                    setSubmitting(false);
-                }, 400);
+                alert(JSON.stringify(values));
+                setSubmitting(false);
             }}
         >
             {({ isSubmitting }) => (

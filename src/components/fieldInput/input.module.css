@@ -1,0 +1,42 @@
+.field > input{
+    font-family: inherit;
+    height: 44px;
+    width: 100%;
+    border: 1px solid var(--grey-25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    letter-spacing: -0.4px;
+    color: var(--grey-75);
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 13px;
+    margin-top: 0;
+    outline: none;
+}
+.field > input::placeholder{
+    color: var(--grey-25);
+}
+.field > input:focus{
+    border-color: var(--grey-50);
+    color: var(--grey-75);
+}
+.field > .withIndicator{
+    opacity: 1;
+    background-image: url('../../assets/datePicker.svg');
+    background-position: calc(100% - 14px) 50%;
+    background-repeat: no-repeat;
+}
+.field > .subscribtion{
+    opacity: 1;
+    background-image: url('../../assets/arrowRDatePicker.svg');
+    background-position: calc(100% - 16px) 50%;
+    background-repeat: no-repeat;
+}
+.field > .masked{
+    text-transform: uppercase;
+    color: var(--grey-25);
+}
+.field > .maskedTouched{
+    text-transform: uppercase;
+    color: var(--grey-75);
+}

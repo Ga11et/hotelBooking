@@ -9,6 +9,7 @@ type props = {
     readonly?: boolean
     isWithIndicator?: boolean
     placeholder?: string
+    name?: string
     type: HTMLInputTypeAttribute
     fieldType: 'default' | 'masked' | 'subscribtion'
 
@@ -17,7 +18,7 @@ type props = {
     onClick?: React.MouseEventHandler<HTMLInputElement> | undefined
 }
 
-export const Input: FC<props> = ({ title, fieldType, type, placeholder, onClick, id, customValue, onFocus, readonly = false, isWithIndicator = false }) => {
+export const Input: FC<props> = ({ name, title, fieldType, type, placeholder, onClick, id, customValue, onFocus, readonly = false, isWithIndicator = false }) => {
     if (fieldType === 'masked') {
 
         const maskedOnFocus = () => {
@@ -25,7 +26,6 @@ export const Input: FC<props> = ({ title, fieldType, type, placeholder, onClick,
             $('.' + css.masked).removeClass(css.masked)
 
         }
-
 
         return <div className={css.field}>
             {title && <h3>{title}</h3>}
@@ -60,6 +60,7 @@ export const Input: FC<props> = ({ title, fieldType, type, placeholder, onClick,
             onClick={onClick && onClick}
             onFocus={onFocus && onFocus}
             id={id && id}
+            name={name}
             value={customValue}
             className={isWithIndicator ? css.withIndicator : undefined}
         />
