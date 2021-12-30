@@ -2,6 +2,7 @@ import image1 from './assets/image1.svg'
 import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
 import { data } from "./components/comment/comment"
+import { Enter } from './templates/enter/enter'
 import { FindRooms } from './templates/findrooms/findrooms'
 import { Register } from './templates/register/register'
 
@@ -29,6 +30,7 @@ export const App = () => {
         onClick={() => console.log('clicked')}
         title='Найдём номера под ваши пожелания' />
       <Register title='Регистрация аккаунта' />
+      <Enter title='Войти' />
     </div>
   </>
 }

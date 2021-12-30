@@ -4,10 +4,6 @@ import { Button } from "../../components/button/button";
 import { FieldInput } from "../../components/fieldInput/fieldInput";
 import { FieldRadioButton } from "../../components/fieldRadioInput/fieldradiobutton";
 import { FieldToggleButton } from "../../components/fieldtoggle/fieldtogglebutton";
-import { Input } from "../../components/input/input";
-import { RadioButton } from "../../components/radiobutton/radiobutton";
-import { ToggleButton } from "../../components/togglebutton/togglebutton";
-import { format } from 'date-fns'
 import css from './register.module.css'
 
 type props = {
@@ -34,8 +30,6 @@ export const Register: FC<props> = ({ title }) => {
         email: '',
         password: '',
         isSpecs: false,
-
-
     }
 
     return <section className={css.registerContainer}>
