@@ -10,6 +10,7 @@ import room3 from './assets/room3.jpg'
 import room4 from './assets/room4.jpg'
 import { Header } from './templates/header/header'
 import { Footer } from './templates/footer/footer'
+import { Landing } from './pages/landing/landing'
 
 
 const richCheckboxData = [
@@ -31,19 +32,7 @@ const commentData: data = {
 
 export const App = () => {
   return <>
-    <div>
-      <Header isAuth userName='Юлий Цезарь' />
-      <Header isAuth={false} />
-      <Booking isLux price={9990} 
-        roomNumber='888'
-        adds={300}
-        discount={2179} />
-      <Room isLux roomNumber='888' 
-        price={9990}
-        reviewsCount={145}
-        photos={[room1, room2, room3, room4]} />
-      <Footer  />
-    </div>
+    <Landing />
   </>
 }
 
