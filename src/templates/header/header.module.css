@@ -1,0 +1,48 @@
+.headerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    box-shadow: 0px 10px 20px var(--grey-5);
+    padding: 0 140px;
+}
+.headerContainer .aboutUs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerContainer .aboutUs > label{
+    padding-right: 20px;
+    font-size: 14px;
+    color: var(--grey-50);
+}
+.headerContainer .aboutUs > label:hover{
+    cursor: pointer;
+}
+.headerContainer .aboutUs .bold{
+    font-weight: 700;
+    color: var(--grey-75);
+}
+.headerContainer .aboutUs > label > img{
+    margin-left: 5px;
+}
+.headerContainer .aboutUs .login{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+.headerContainer .aboutUs .login > button{
+    width: unset;
+    height: 34px;
+    padding: 0 20px;
+}
+.headerContainer .aboutUs .accaunt{
+    color: var(--grey-50);
+    padding-left: 20px;
+    border-left: 1px solid var(--grey-10);
+}
+.headerContainer .aboutUs .accaunt > label{
+    cursor: pointer;
+}
