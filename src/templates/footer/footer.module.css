@@ -1,0 +1,62 @@
+.footerContainer{
+    box-shadow: 0px 10px 20px var(--grey-5);
+}
+.footerContainer .footerWidgets{
+    padding: 100px 140px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-5);
+    font-size: 14px;
+    color: var(--grey-50);
+}
+.footerContainer .footerWidgets > div{
+    display: flex;
+    flex-direction: column;
+}
+.footerContainer .footerWidgets > div > label{
+    line-height: 17px;
+    padding-bottom: 20px;
+}
+.footerContainer .footerWidgets > div > label:hover{
+    cursor: pointer;
+}
+.footerContainer .footerWidgets > div .heading{
+    color: var(--grey-100);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.footerContainer .footerWidgets .fifth .heading{
+    padding-bottom: 15px;
+}
+.footerContainer .footerWidgets > div > p{
+    margin: 0;
+    line-height: 24px;
+    color: var(--grey-75);
+    padding-bottom: 20px;
+}
+.footerContainer .footerWidgets > div > img{
+    width: 105px;
+    padding-bottom: 20px;
+}
+.footerContainer .footerWidgets .first{
+    width: 280px;
+}
+.footerContainer .footerWidgets .fifth{
+    width: 260px;
+}
+.footerContainer .copyrightBar{
+    height: 70px;
+    padding: 0 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--grey-75);
+}
+.footerContainer .copyrightBar .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 112px;
+}
