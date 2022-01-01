@@ -30,7 +30,7 @@ export const DateInput: FC<props> = ({ name, id, type, setDays }) => {
         if (setDays && dates.start !== null && dates.end !== null) {
             setDays(dates.end.getDate() - dates.start.getDate())
         }
-    }, [dates])
+    }, [dates, setDays])
     
 
     const openDataPicker = () => {

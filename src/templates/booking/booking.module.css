@@ -11,6 +11,7 @@
 .bookingContainer form .bookingHeader{
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 }
 .bookingContainer form .bookingHeader .roomNumber .numChar{
     font-weight: 700;

@@ -1,0 +1,35 @@
+.swiper {
+    border-radius: inherit;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    display: none;
+}
+.swiper-button-next{
+    background: url('../../assets/swiperRight.svg') center no-repeat;
+}
+.swiper-button-prev{
+    background: url('../../assets/swiperLeft.svg') center no-repeat;
+}
+.swiper-horizontal > .swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 13px;
+    right: -5px;
+    width: 30%;
+    right: -5px;
+    left: unset;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 2px;
+}
+.swiper-pagination-bullet {
+    background: transparent;
+    border: 1px solid white;
+    opacity: 1;
+    width: 7.5px;
+    height: 7.5px;
+    box-sizing: border-box;
+}
+.swiper-pagination-bullet-active {
+    background: white;
+}

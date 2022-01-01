@@ -3,9 +3,12 @@ import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
 import { data } from "./components/comment/comment"
 import { Booking } from './templates/booking/booking'
-import { Enter } from './templates/enter/enter'
-import { FindRooms } from './templates/findrooms/findrooms'
-import { Register } from './templates/register/register'
+import { Room } from './templates/room/room'
+import room1 from './assets/room1.jpg'
+import room2 from './assets/room2.jpg'
+import room3 from './assets/room3.jpg'
+import room4 from './assets/room4.jpg'
+
 
 const richCheckboxData = [
   { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
@@ -31,6 +34,10 @@ export const App = () => {
         roomNumber='888'
         adds={300}
         discount={2179} />
+      <Room isLux roomNumber='888' 
+        price={9990}
+        reviewsCount={145}
+        photos={[room1, room2, room3, room4]} />
     </div>
   </>
 }
