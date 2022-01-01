@@ -27,7 +27,7 @@ export const Room: FC<props> = ({ isLux, roomNumber, price, reviewsCount, photos
             slidesPerView={1}
         >
             {photos.map(el => <SwiperSlide key={el}>
-                <img src={el} alt='roomPhoto' />
+                <img src={el} alt='roomPhoto' className={css.slider} />
             </SwiperSlide>)}
         </Swiper>
         <div className={css.roomInfo}>

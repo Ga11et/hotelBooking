@@ -1,18 +1,15 @@
 import { FC } from "react";
-import { Header } from "../../templates/header/header";
 import css from './landing.module.css'
 import background from '../../assets/lending/background.jpg'
 import { FindRooms } from "../../templates/findrooms/findrooms";
-import { Footer } from "../../templates/footer/footer";
 
 
 type props = {
 
 }
 
-export const Landing: FC<props> = ({  }) => {
+const Landing: FC<props> = ({  }) => {
     return <>
-        <Header isAuth={false} />
         <main className={css.contentContainer}>
             <img src={background} alt="background" />
             <FindRooms id="main"
@@ -23,6 +20,7 @@ export const Landing: FC<props> = ({  }) => {
                 Лучшие номера для вашей работы, отдыха и просто вдохновения
             </p>
         </main>
-        <Footer />
     </>
 }
+
+export default Landing

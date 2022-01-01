@@ -3,9 +3,10 @@ import css from './slider.module.css'
 import { Range } from 'rc-slider';
 type props = {
     name: string
+    title: string
 }
 
-export const MySlider: FC<props> = ({ name }) => {
+export const MySlider: FC<props> = ({ name, title }) => {
 
     const [rangeValues, setRangeValues] = useState([25,70])
 
@@ -17,7 +18,7 @@ export const MySlider: FC<props> = ({ name }) => {
 
     return <section className={css.sliderContainer}>
         <div className={css.sliderHeader}>
-            <h3>{name}</h3>
+            <h3>{title}</h3>
             <label>{sliderData}</label>
         </div>
         <div className={css.inputsContainer}>

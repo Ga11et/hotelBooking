@@ -1,5 +1,6 @@
 .footerContainer{
     box-shadow: 0px 10px 20px var(--grey-5);
+    border-top: 1px solid var(--grey-10);
 }
 .footerContainer .footerWidgets{
     padding: 100px 140px 80px;

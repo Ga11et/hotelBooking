@@ -11,6 +11,7 @@
     border-radius: 4px;
     vertical-align: baseline;
     box-sizing: border-box;
+    transform: translateY(-1px);
 }
 .input:checked + .pseudo{
     border: 1px solid var(--purple);

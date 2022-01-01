@@ -1,9 +1,8 @@
 .roomContainer{
     width: 270px;
-    border: 1px solid var(--grey-10) ;
     border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
 }
 .roomContainer .roomInfo{
     margin: 13px 20px 8px;
@@ -56,4 +55,7 @@
 }
 .roomContainer .roomReview .reviews .number > label{
     font-weight: 400;
+}
+.slider{
+    width: 100%;
 }

@@ -2,21 +2,17 @@ import image1 from './assets/image1.svg'
 import image2 from './assets/image2.svg'
 import person1 from './assets/person1.jpg'
 import { data } from "./components/comment/comment"
-import { Booking } from './templates/booking/booking'
-import { Room } from './templates/room/room'
-import room1 from './assets/room1.jpg'
-import room2 from './assets/room2.jpg'
-import room3 from './assets/room3.jpg'
-import room4 from './assets/room4.jpg'
 import { Header } from './templates/header/header'
 import { Footer } from './templates/footer/footer'
-import { Landing } from './pages/landing/landing'
+import { Route, Routes } from 'react-router-dom';
+import Landing from './pages/landing/landing'
+import { Filter } from './pages/filter/filter'
+import { useState } from 'react'
+// const Landing = React.lazy(() => import('./pages/landing/landing'));
 
 
-const richCheckboxData = [
-  { label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
-  { label: 'Помощник для инвалидов', describtion: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
-]
+
+
 const optionsData = [
   { image: image1, name: 'Комфорт', describtion: 'Шумопоглощающие стены' },
   { image: image2, name: 'Удобство', describtion: 'Окно в каждой из спален' }
@@ -30,9 +26,20 @@ const commentData: data = {
   publication: new Date(2021, 11, 20)
 }
 
-export const App = () => {
+const App = () => {
+
+  const [dates, setDates] = useState({start: null, end: null})
+  const [guests, setGuests] = useState({first: 0, second: 0, third: 0})
+
   return <>
-    <Landing />
+    <Header isAuth={false} />
+    <Routes>
+      <Route path='/landing' element={<Landing />} />
+      <Route path='/filter' element={<Filter dates={dates} guests={guests} />} />
+    </Routes>
+    <Footer />
   </>
 }
+
+export default App
 

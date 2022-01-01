@@ -14,12 +14,13 @@ type props = {
     name: string
     type: 'oneInput' | 'twoInputs'
 
+    title?: string
     setDays?: (days: number) => void
 }
 
 type date = Date | null
 
-export const DateInput: FC<props> = ({ name, id, type, setDays }) => {
+export const DateInput: FC<props> = ({ name, id, type, setDays, title }) => {
 
     const today = new Date()
     const tomorrow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDay())
@@ -85,7 +86,7 @@ export const DateInput: FC<props> = ({ name, id, type, setDays }) => {
                                 id="leftDateInput"
                                 readonly
                                 type='text'
-                                title="Дата пребывания"
+                                title={title}
                                 onFocus={openDataPicker}
                                 isWithIndicator
                             />

@@ -1,0 +1,17 @@
+.filterContainer{
+    padding: 30px 140px;
+    display: grid;
+    grid-template-columns: 266px 1fr;
+}
+.filterContainer .contentContainer{
+    padding: 15px 0px 30px 70px;
+}
+.filterContainer .contentContainer h1{
+    padding-bottom: 20px;
+}
+.filterContainer .contentContainer .rooms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
