@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { CheckBoxList } from "../../components/checkboxList/checkboxlist";
 import { DateInput } from "../../components/datepicker/dateInput";
 import { Dropdown } from "../../components/dropdown/dropdown";
@@ -12,41 +12,59 @@ import room3 from '../../assets/room3.jpg'
 import room4 from '../../assets/room4.jpg'
 import { Room } from "../../templates/room/room";
 import { Paginator } from "../../components/pagination/paginator";
-import { useNavigate } from "react-router"
-import { stringify } from "query-string";
-import { Button } from "../../components/button/button";
 
 type props = {
     dates: { start: Date | null, end: Date | null }
     guests: { first: number, second: number, third: number }
 }
+type formValues = {
+    dates: { start: Date | null, end: Date | null }
+    guests: { first: number, second: number, third: number }
+    'Можно курить':	boolean
+    'Можно с питомцами': boolean
+    'Можно пригласить гостей (до 10 человек)': boolean
+    'Широкий коридор': boolean
+    'Помощник для инвалидов': boolean
+    'Завтрак': boolean
+    'Письменный стол': boolean
+    'Стул для кормления': boolean
+    'Кроватка': boolean
+    'Телевизор': boolean
+    'Шампунь': boolean
+    'Телевизор2': boolean
+    'Шампунь2': boolean
+    conveniences: { first: number, second: number, third: number }
+    price: string
+}
 
 export const Filter: FC<props> = ({ dates, guests }) => {
-
+    console.table(dates)
+    console.table(guests)
     const richCheckboxData = [
         { id: '1', label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
         { id: '2', label: 'Помощник для инвалидов', describtion: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
     ]
     const additionsData = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор2', 'Шампунь2']
 
-    const initialValues = {
-
+    const initialValues: formValues = {
+        "Можно курить": false,
+        "Можно пригласить гостей (до 10 человек)": false,
+        "Можно с питомцами": false,
+        "Письменный стол": false,
+        "Помощник для инвалидов": false,
+        "Стул для кормления": false,
+        "Широкий коридор": false,
+        "Завтрак": false,
+        "Кроватка": false,
+        "Телевизор": false,
+        "Телевизор2": false,
+        "Шампунь": false,
+        "Шампунь2": false,
+        price: '5000₽ - 14000₽',
+        conveniences: { first: 2, second: 2, third: 0 },
+        dates: {start: null, end: null},
+        guests: { first: 0, second: 0, third: 0 }
     }
-    type urlDataType = {
-        term?: string
-        friend?: string
-        page?: string
-    }
-    const navigate = useNavigate()
-    const data: urlDataType = {
-        friend: 'asd'
-    }
-
-    useEffect(() => {
-        console.log('>>> ', data)
-        navigate(`?${stringify(data)}`, { replace: false })
-    }, [])
-
 
     return <main className={css.filterContainer}>
         <nav className={css.navContainer}>
@@ -65,6 +83,7 @@ export const Filter: FC<props> = ({ dates, guests }) => {
                                 name="dates"
                                 type="oneInput"
                                 title="даты пребывания в отеле"
+                                startValues={dates}
                                 submitForm={submitForm}
                             />
                             <Dropdown
@@ -72,6 +91,7 @@ export const Filter: FC<props> = ({ dates, guests }) => {
                                 name="guests"
                                 type="buttons"
                                 title="гости"
+                                startValue={guests}
                                 submitForm={submitForm}
                             />
                             <MySlider name="price" title="диапазон цены"
@@ -115,21 +135,18 @@ export const Filter: FC<props> = ({ dates, guests }) => {
                     price={9999}
                     reviewsCount={123}
                     roomNumber="888"
-
                 />
                 <Room isLux
                     photos={[room1, room2, room3, room4]}
                     price={9999}
                     reviewsCount={123}
                     roomNumber="888"
-
                 />
                 <Room isLux
                     photos={[room1, room2, room3, room4]}
                     price={9999}
                     reviewsCount={123}
                     roomNumber="888"
-
                 />
                 <Room isLux
                     photos={[room1, room2, room3, room4]}

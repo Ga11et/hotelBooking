@@ -14,6 +14,7 @@ type props = {
     name: string
     type: 'oneInput' | 'twoInputs'
 
+    startValues?: { start: date, end: date }
     title?: string
     setDays?: (days: number) => void
     submitForm?: (() => Promise<void>) & (() => Promise<any>)
@@ -21,12 +22,12 @@ type props = {
 
 type date = Date | null
 
-export const DateInput: FC<props> = ({ name, id, type, setDays, title, submitForm }) => {
+export const DateInput: FC<props> = ({ name, id, type, setDays, title, submitForm, startValues }) => {
 
     const today = new Date()
     const tomorrow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDay())
 
-    const [dates, setDates] = useState<{ start: date, end: date }>(() => ({ start: null, end: null }))
+    const [dates, setDates] = useState<{ start: date, end: date }>( startValues ? () => (startValues)  : () => ({ start: null, end: null }) )
 
     useEffect(() => {
         if (setDays && dates.start !== null && dates.end !== null) {

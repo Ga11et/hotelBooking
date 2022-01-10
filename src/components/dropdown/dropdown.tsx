@@ -10,12 +10,14 @@ type props = {
     id: string
     title: string 
 
+    startValue?: { first: number, second: number, third: number }
+
     submitForm?: (() => Promise<void>) & (() => Promise<any>)
 }
 
-export const Dropdown: FC<props> = ({ name, type, id, title, submitForm }) => {
+export const Dropdown: FC<props> = ({ name, type, id, title, submitForm, startValue }) => {
 
-    const itemsStartValue = type === 'default' ? { first: 2, second: 2, third: 0 } : { first: 0, second: 0, third: 0 }
+    const itemsStartValue = type === 'default' ? { first: 2, second: 2, third: 0 } : startValue ? startValue : { first: 0, second: 0, third: 0 }
     const buttonsStartValue = type === 'default' ? { first: false, second: false, third: true } : { first: true, second: true, third: true }
 
     const [itemsValue, setItemsValue] = useState(() => itemsStartValue)

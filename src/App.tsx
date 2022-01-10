@@ -31,10 +31,12 @@ const App = () => {
   const [dates, setDates] = useState({start: null, end: null})
   const [guests, setGuests] = useState({first: 0, second: 0, third: 0})
 
+  
+
   return <>
     <Header isAuth={false} />
     <Routes>
-      <Route path='/landing' element={<Landing />} />
+      <Route path='/landing' element={<Landing setDates={setDates} setGuests={setGuests} />} />
       <Route path='/filter' element={<Filter dates={dates} guests={guests} />} />
     </Routes>
     <Footer />
