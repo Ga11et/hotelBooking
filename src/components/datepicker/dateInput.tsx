@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { ChangeEventHandler, FC, useEffect, useState } from "react";
 import css from './dateInput.module.css'
 import $ from 'jquery'
 import DatePicker, { registerLocale } from 'react-datepicker'
@@ -16,11 +16,12 @@ type props = {
 
     title?: string
     setDays?: (days: number) => void
+    submitForm?: (() => Promise<void>) & (() => Promise<any>)
 }
 
 type date = Date | null
 
-export const DateInput: FC<props> = ({ name, id, type, setDays, title }) => {
+export const DateInput: FC<props> = ({ name, id, type, setDays, title, submitForm }) => {
 
     const today = new Date()
     const tomorrow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDay())
@@ -58,6 +59,9 @@ export const DateInput: FC<props> = ({ name, id, type, setDays, title }) => {
 
                 const closeDataPickerAlt = () => {
                     setFieldValue(name, dates)
+                    if (submitForm) {
+                        submitForm()
+                    }
                     closeDataPicker()
                 }
 

@@ -34,7 +34,7 @@ export const Room: FC<props> = ({ isLux, roomNumber, price, reviewsCount, photos
             <div className={css.roomNumber}>
                 <label className={css.numChar}>№ </label>
                 <label className={css.number}>{roomNumber}</label>
-                {isLux && <label className={css.lux}>люкс</label>}
+                {isLux && <label className={css.lux}> люкс</label>}
             </div>
             <div className={css.perDay}>
                 <label className={css.price}>{price}₽</label>

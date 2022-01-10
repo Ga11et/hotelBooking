@@ -9,9 +9,11 @@ type props = {
     list: string[]
     title: string
     type: 'default' | 'withDropdawn'
+
+    submitForm?: (() => Promise<void>) & (() => Promise<any>)
 }
 
-export const CheckBoxList: FC<props> = ({ name, list, id, title, type }) => {
+export const CheckBoxList: FC<props> = ({ name, list, id, title, type, submitForm }) => {
 
     const [handlerMode, setHundlerMode] = useState(false)
 
@@ -37,14 +39,14 @@ export const CheckBoxList: FC<props> = ({ name, list, id, title, type }) => {
             <div className={css.dropdown}
                 style={{ display: 'none' }}
                 id={id} >
-                {list.map(el => <CheckboxContainer key={el} label={el} name={name} />)}
+                {list.map(el => <CheckboxContainer key={el} label={el} name={el} submitForm={submitForm} />)}
             </div>
         </section>
     }
 
     return <section className={css.CheckboxContainer}>
         <h3>{title}</h3>
-        {list.map(el => <CheckboxContainer key={el} label={el} name={name} />)}
+        {list.map(el => <CheckboxContainer key={el} label={el} name={el} submitForm={submitForm} />)}
     </section>
 
 }
@@ -52,12 +54,14 @@ export const CheckBoxList: FC<props> = ({ name, list, id, title, type }) => {
 type checkboxProps = {
     label: string
     name: string
+
+    submitForm?: (() => Promise<void>) & (() => Promise<any>)
 }
 
-const CheckboxContainer: FC<checkboxProps> = ({ label, name }) => {
+const CheckboxContainer: FC<checkboxProps> = ({ label, name, submitForm }) => {
     return <>
         <label className={css.checkbox}>
-            <Checkbox label={label} name={name} />
+            <Checkbox label={label} name={name} submitForm={submitForm} />
             {label}
         </label>
     </>

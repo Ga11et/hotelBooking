@@ -4,7 +4,9 @@
 .sliderContainer .sliderHeader{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
-
+.sliderContainer .sliderHeader > label{
+    padding-bottom: 2px;
+}

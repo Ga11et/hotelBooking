@@ -1,18 +1,19 @@
 import { FC, useState } from "react";
 import css from './slider.module.css'
 import { Range } from 'rc-slider';
+import { Field, FieldProps } from "formik";
 type props = {
     name: string
     title: string
+
+    submitForm?: (() => Promise<void>) & (() => Promise<any>)
 }
 
-export const MySlider: FC<props> = ({ name, title }) => {
+export const MySlider: FC<props> = ({ name, title, submitForm }) => {
 
     const [rangeValues, setRangeValues] = useState([25,70])
 
-    const rangeOnChange = (value: number[]) => {
-        setRangeValues(value)
-    }
+    
 
     const sliderData = `${rangeValues[0]*200}₽ - ${rangeValues[1]*200}₽`
 
@@ -22,8 +23,28 @@ export const MySlider: FC<props> = ({ name, title }) => {
             <label>{sliderData}</label>
         </div>
         <div className={css.inputsContainer}>
-            <Range onChange={rangeOnChange}
-                defaultValue={[25,70]} />
+            <Field name={name}>
+                {( {form: { setFieldValue }}: FieldProps) => {
+
+                    const rangeOnChange = (value: number[]) => {
+                        setRangeValues(value)
+                    }
+
+                    const rangeOnAfterChange = (value: number[]) => {
+                        setFieldValue(name, sliderData)
+                        if (submitForm) {
+                            submitForm()
+                        }
+                    }
+
+                    return <>
+                        <Range onChange={rangeOnChange}
+                            defaultValue={[25,70]}
+                            onAfterChange={rangeOnAfterChange} />
+                    </>
+                }}
+            </Field>
+            
         </div>
     </section>
     
