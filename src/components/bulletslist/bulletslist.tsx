@@ -2,13 +2,13 @@ import { FC } from "react";
 import css from './bulletlist.module.css'
 
 type props = {
-    name: string,
+    title: string,
     data: string[]
 }
 
-export const BulletList: FC<props> = ({ name, data }) => {
+export const BulletList: FC<props> = ({ title, data }) => {
     return <section className={css.bulletListContainer}>
-        <h3>{name}</h3>
+        <h2>{title}</h2>
         <ul className={css.bullets}>
             {data.map( el => <Bullet key={el} data={el} />)}
         </ul>

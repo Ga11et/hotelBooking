@@ -3,6 +3,7 @@
     grid-template-columns: 50px 1fr;
     grid-template-rows: 50px auto;
     grid-gap: 10px;
+    padding-bottom: 20px;
 }
 .commentContainer > img{
     width: 100%;
@@ -19,4 +20,9 @@
     font-weight: 400;
     color: var(--grey-75);
     margin: 0;
+}
+.commentContainer .likeContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
 }

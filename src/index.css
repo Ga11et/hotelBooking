@@ -11,6 +11,8 @@
   --gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   --gradient-25: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
   --gradient-50: linear-gradient(180deg, rgba(188,156,255,0.5) 0%, rgba(139,164,249,0.5) 100%);
+  --gradient-best: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  --gradient-bad: linear-gradient(180deg, #919191 0%, #3D4975 100%);
   font-family: 'Montserrat';
   background-color: white;
 } 

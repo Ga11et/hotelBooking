@@ -1,0 +1,100 @@
+.roomDetailsContainer .images{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "image1 image2"
+                         "image1 image3";
+}
+.roomDetailsContainer .images .image1{
+    grid-area: image1;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.roomDetailsContainer .images .image2{
+    grid-area: image2;
+    width: 100%;
+}
+.roomDetailsContainer .images .image3{
+    grid-area: image3;
+    width: 100%;
+}
+.roomDetailsContainer .roomDetails{
+    padding: 70px 140px;
+    border-bottom: 1px solid var(--grey-10);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 70px;
+}
+.roomDetailsContainer .roomDetails .details .upper{
+    display: grid;
+    grid-template-columns: 280px 1fr 380px;
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer .pieChart{
+    height: 140px;
+    width: 140px;
+    position: relative;
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer .pieChart .totalImpressions{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer .pieChart .totalImpressions > label{
+    display: block;
+    font-size: 24px;
+    color: var(--purple);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer .pieChart .totalImpressions .bottom{
+    font-size: 12px;
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer .legend{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer .legend > label{
+    display: block;
+    color: var(--grey-75);
+}
+.roomDetailsContainer .roomDetails .details .upper .pieChartContainer .pieChartContentContainer .legend > label > span{
+    display: inline-block;
+    background: var(--grey-10);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.roomDetailsContainer .roomDetails .details .middle{
+    position: relative;
+}
+.roomDetailsContainer .roomDetails .details .middle > label{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: var(--grey-50);
+}
+.roomDetailsContainer .roomDetails .details .under{
+    display: grid;
+    grid-template-columns: 280px 1fr 400px;
+}
+.roomDetailsContainer .roomDetails .details .under .cancel > p{
+    padding-right: 60px;
+}
+.roomDetailsContainer .roomDetails .booking{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

@@ -1,6 +1,9 @@
 .bulletListContainer{
     width: 100%;
 }
+.bulletListContainer > h2{
+    padding-left: 20px;
+}
 .bulletListContainer .bullets{
     display: grid;
     grid-gap: 10px;

@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: 48px 1fr;
     border-bottom: 1px solid var(--grey-10);
+    padding-left: 6px;
+}
+.optionsContainer .last{
+    border-bottom: 1px solid transparent;
 }
 .optionsContainer .item img{
     align-self: center;

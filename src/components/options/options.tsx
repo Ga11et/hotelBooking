@@ -1,28 +1,31 @@
 import { FC } from "react"
 import css from './options.module.css'
 
-type data = {image: string, name: string, describtion: string}
+export type roomInfoDataType = {image: string, title: string, description: string}
 
 type props = {
-    data: data[]
+    data: roomInfoDataType[]
+    title: string
 }
 
-export const Options: FC<props> = ({ data }) => {
+export const Options: FC<props> = ({ data, title }) => {
     return <section className={css.optionsContainer}>
-        {data.map( el => <Item key={el.name} data={el} />)}
+        <h2>{title}</h2>
+        {data.map( el => <Item key={el.title} data={el} className={el.title === data[data.length - 1].title ? css.last : ''} />)}
     </section>
 }
 
 type ItemProps = {
-    data: data
+    data: roomInfoDataType
+    className: string
 }
 
-const Item:FC<ItemProps> = ({ data }) => {
-    return <div className={css.item}>
+const Item:FC<ItemProps> = ({ data, className }) => {
+    return <div className={css.item + ' ' + className} >
         <img src={data.image} alt="pic" />
         <div className={css.itemContent}>
-            <h4>{data.name}</h4>
-            <p>{data.describtion}</p>
+            <h4>{data.title}</h4>
+            <p>{data.description}</p>
         </div>
     </div>
 }

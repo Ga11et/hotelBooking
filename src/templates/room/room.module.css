@@ -4,6 +4,9 @@
     box-sizing: border-box;
     margin-bottom: 12px;
 }
+.roomContainer:hover{
+    cursor: pointer;
+}
 .roomContainer .roomInfo{
     margin: 13px 20px 8px;
     padding-bottom: 8px;
@@ -58,4 +61,6 @@
 }
 .slider{
     width: 100%;
+    height: 152px;
+    object-fit: cover;
 }

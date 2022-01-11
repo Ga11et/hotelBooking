@@ -8,6 +8,7 @@ import '../../../node_modules/swiper/modules/effect-fade/effect-fade.scss'
 import '../../../node_modules/swiper/swiper.scss'
 import css from './room.module.css'
 import './swiper.css'
+import { useNavigate } from "react-router";
 
 type props = {
     isLux: boolean
@@ -19,7 +20,10 @@ type props = {
 }
 
 export const Room: FC<props> = ({ isLux, roomNumber, price, reviewsCount, photos }) => {
-    return <section className={css.roomContainer}>
+
+    const navigate = useNavigate()
+
+    return <section className={css.roomContainer} onClick={() => navigate('/room')}>
         <Swiper
             modules={[Navigation, Pagination]}
             navigation

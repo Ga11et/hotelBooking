@@ -12,6 +12,7 @@ import room3 from '../../assets/room3.jpg'
 import room4 from '../../assets/room4.jpg'
 import { Room } from "../../templates/room/room";
 import { Paginator } from "../../components/pagination/paginator";
+import { Navigate } from "react-router";
 
 type props = {
     dates: { start: Date | null, end: Date | null }
