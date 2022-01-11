@@ -1,5 +1,6 @@
 import { Form, Formik } from "formik";
 import { FC } from "react";
+import { useNavigate } from "react-router";
 import { Button } from "../../components/button/button";
 import { FieldInput } from "../../components/fieldInput/fieldInput";
 import css from './enter.module.css'
@@ -14,6 +15,8 @@ export const Login: FC<props> = ({ title }) => {
         email: '',
         password: ''
     }
+
+    const navigate = useNavigate()
 
     return <section className={css.enterContainer}>
         <Formik
@@ -41,7 +44,7 @@ export const Login: FC<props> = ({ title }) => {
                         type="big" />
                     <div className={css.isAccauntExist}>
                         <p>Уже есть аккаунт на Toxin</p>
-                        <Button onClick={() => console.log('clicked')}
+                        <Button onClick={() => navigate('/register')}
                             type="empty" isSubmit={false}
                             text="Создать" />
                     </div>

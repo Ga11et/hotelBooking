@@ -1,5 +1,6 @@
 import { Form, Formik } from "formik";
 import { FC } from "react";
+import { useNavigate } from "react-router";
 import { Button } from "../../components/button/button";
 import { FieldInput } from "../../components/fieldInput/fieldInput";
 import { FieldRadioButton } from "../../components/fieldRadioInput/fieldradiobutton";
@@ -32,6 +33,8 @@ export const Register: FC<props> = ({ title }) => {
         isSpecs: false,
     }
 
+    const navigate = useNavigate()
+
     return <section className={css.registerContainer}>
         <Formik
             initialValues={initialValues}
@@ -60,12 +63,12 @@ export const Register: FC<props> = ({ title }) => {
                     </div>
                     <FieldToggleButton label="Получать спецпредложения" name="isSpecs" />
                     <Button type="big" 
-                        text="Перейти к оплате" 
+                        text="Зарегистрироваться" 
                         isSubmit 
                         onClick={() => console.log('clicked')} />
                     <div className={css.isAccauntExist}>
                         <p>Уже есть аккаунт на Toxin</p>
-                        <Button onClick={() => console.log('clicked')}
+                        <Button onClick={() => navigate('/login')}
                             type="empty" isSubmit={false}
                             text="Войти" />
                     </div>

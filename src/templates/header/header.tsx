@@ -3,6 +3,7 @@ import css from './header.module.css'
 import logo from '../../assets/Logo.svg'
 import picker from '../../assets/datePicker.svg'
 import { Button } from "../../components/button/button";
+import { useNavigate } from "react-router";
 
 type props = {
     isAuth: boolean
@@ -10,9 +11,12 @@ type props = {
 }
 
 export const Header: FC<props> = ({ isAuth, userName }) => {
+
+    const navigate = useNavigate()
+
     return <header className={css.headerContainer}>
         <div className={css.logo}>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" onClick={() => navigate('/landing')} />
         </div>
         <div className={css.aboutUs}>
             <label className={css.bold}>О нас</label>
@@ -25,12 +29,12 @@ export const Header: FC<props> = ({ isAuth, userName }) => {
             </div>}
             {!isAuth && <div className={css.login}>
             <Button isSubmit={false} 
-                onClick={() => console.log('clicked')}
+                onClick={() => navigate('/login')}
                 text="Войти"
                 type="empty"
             />
             <Button isSubmit={false} 
-                onClick={() => console.log('clicked')}
+                onClick={() => navigate('/register')}
                 text="Зарегистрироваться"
                 type="filled"
             />

@@ -6,6 +6,9 @@
     height: 70px;
     padding: 0 140px;
 }
+.headerContainer .logo:hover{
+    cursor: pointer;
+}
 .headerContainer .aboutUs{
     display: flex;
     flex-direction: row;
