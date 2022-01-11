@@ -1,0 +1,12 @@
+.registerContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.registerContainer > img{
+    width: 100%;
+}
+.registerContainer > section{
+    position: absolute;
+    top: 20px;
+}

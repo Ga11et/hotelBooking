@@ -22,11 +22,11 @@ export const FindRooms: FC<props> = ({ id, title, onClick }) => {
             initialValues={{ findRooms: { start: null, end: null}, guests: { first: 0, second: 0, third: 0} }}
             onSubmit={(values, { setSubmitting }) => {
                 onClick(values.findRooms, values.guests)
-                navigate('/filter', {replace: true})
                 setSubmitting(false);
+                navigate('/filter', {replace: true})
             }}
         >
-            {({ isSubmitting, submitForm }) => (
+            {({ isSubmitting }) => (
                 <Form>
                     <h1>{title}</h1>
                     <DateInput id={id + 'findrooms'} type="twoInputs" name="findRooms" />

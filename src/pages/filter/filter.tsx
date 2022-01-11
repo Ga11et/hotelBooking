@@ -38,8 +38,7 @@ type formValues = {
 }
 
 export const Filter: FC<props> = ({ dates, guests }) => {
-    console.table(dates)
-    console.table(guests)
+    
     const richCheckboxData = [
         { id: '1', label: 'Широкий коридор', describtion: 'Ширина коридоров в номере не менее 91 см.' },
         { id: '2', label: 'Помощник для инвалидов', describtion: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
