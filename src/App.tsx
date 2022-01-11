@@ -9,6 +9,7 @@ import Landing from './pages/landing/landing'
 import { Filter } from './pages/filter/filter'
 import { useState } from 'react'
 import { RegisterPage } from './pages/register/register'
+import { LoginPage } from './pages/login/login'
 // const Landing = React.lazy(() => import('./pages/landing/landing'));
 
 
@@ -40,6 +41,7 @@ const App = () => {
       <Route path='/landing' element={<Landing setDates={setDates} setGuests={setGuests} />} />
       <Route path='/filter' element={<Filter dates={dates} guests={guests} />} />
       <Route path='/register' element={<RegisterPage />} />
+      <Route path='/login' element={<LoginPage />} />
       <Route path='*' element={<div>404</div>} />
     </Routes>
     <Footer />

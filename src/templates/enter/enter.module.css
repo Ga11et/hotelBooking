@@ -4,6 +4,7 @@
     border-radius: 4px;
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    background: white;
 }
 .enterContainer form{
     padding: 40px 30px 30px;

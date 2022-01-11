@@ -1,12 +1,12 @@
-.registerContainer{
+.loginConatainer{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.registerContainer > img{
+.loginConatainer > img{
     width: 100%;
 }
-.registerContainer > section{
+.loginConatainer > section{
     position: absolute;
 }

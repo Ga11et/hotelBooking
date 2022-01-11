@@ -8,7 +8,7 @@ type props = {
     title: string
 }
 
-export const Enter: FC<props> = ({ title }) => {
+export const Login: FC<props> = ({ title }) => {
 
     const initialValues = {
         email: '',
