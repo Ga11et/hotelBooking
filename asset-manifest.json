@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/hotelBooking/static/css/main.3b90b7f6.css",
+    "main.js": "/hotelBooking/static/js/main.5e9accc4.js",
+    "static/js/787.85a7da5f.chunk.js": "/hotelBooking/static/js/787.85a7da5f.chunk.js",
+    "static/media/background.jpg": "/hotelBooking/static/media/background.4ce5a81827f6ca1ab17c.jpg",
+    "static/media/room1.jpg": "/hotelBooking/static/media/room1.73cd293e9c7dbe908503.jpg",
+    "static/media/room2.jpg": "/hotelBooking/static/media/room2.3a3de9ba9061ff6e271a.jpg",
+    "static/media/room4.jpg": "/hotelBooking/static/media/room4.3e9fdc4cf0f77d8bd300.jpg",
+    "static/media/room3.jpg": "/hotelBooking/static/media/room3.b338cbad91cd028a0266.jpg",
+    "static/media/Logo.svg": "/hotelBooking/static/media/Logo.d8e3f103706f8c718d45db2297bd365b.svg",
+    "static/media/instagram.svg": "/hotelBooking/static/media/instagram.24d00042d10ba73228f2778ed2279764.svg",
+    "static/media/comfort.svg": "/hotelBooking/static/media/comfort.8cfc3b5bc27280760ee07ca9a771e3d2.svg",
+    "static/media/twitter.svg": "/hotelBooking/static/media/twitter.47e1a31ccf7d12c159feda58d427b526.svg",
+    "static/media/emptyLike.svg": "/hotelBooking/static/media/emptyLike.69d1f53200b2364767d20745d014dbf3.svg",
+    "static/media/cosiness.svg": "/hotelBooking/static/media/cosiness.fcc9eaf8c182f27c6a88d732c754d6d8.svg",
+    "static/media/facebook.svg": "/hotelBooking/static/media/facebook.780de72277ace9464709f47fe5d8709f.svg",
+    "static/media/filledLike.svg": "/hotelBooking/static/media/filledLike.cde7f22f6945bf8bd65de4764d4f08db.svg",
+    "static/media/convenience.svg": "/hotelBooking/static/media/convenience.67920af83217c70ac2241c0ec37de054.svg",
+    "static/media/checkedBox.svg": "/hotelBooking/static/media/checkedBox.e8b27bf537c7be5a13cb.svg",
+    "index.html": "/hotelBooking/index.html",
+    "static/media/emptyStar.svg": "/hotelBooking/static/media/emptyStar.08bf66af203c43cb6f2efa58e8d61144.svg",
+    "static/media/filledStar.svg": "/hotelBooking/static/media/filledStar.1f1fe8053dc4da9ab0670052f50d3db8.svg",
+    "static/media/whiteLeftArrow.svg": "/hotelBooking/static/media/whiteLeftArrow.a508479367360f0ec22c265f794be5b8.svg",
+    "static/media/radioChecked.svg": "/hotelBooking/static/media/radioChecked.4344cd3c38789ca2d848.svg",
+    "static/media/arrowRDatePicker.svg": "/hotelBooking/static/media/arrowRDatePicker.18e01e373ec4218f4899.svg",
+    "static/media/arrowLDatePicker.svg": "/hotelBooking/static/media/arrowLDatePicker.7ebecda5cb5e6f18a997.svg",
+    "static/media/whiteRightArrow.svg": "/hotelBooking/static/media/whiteRightArrow.018468407045f46b597bbc326dc95567.svg",
+    "static/media/swiperRight.svg": "/hotelBooking/static/media/swiperRight.8bcb71df7452c005feea.svg",
+    "static/media/swiperLeft.svg": "/hotelBooking/static/media/swiperLeft.348e5079e9443e85a843.svg",
+    "static/media/datePicker.svg": "/hotelBooking/static/media/datePicker.e85954bc6e43e8dff6e057cce6ab769e.svg",
+    "static/media/datePickerReverse.svg": "/hotelBooking/static/media/datePickerReverse.3ab9ddb55e854926e7e3.svg",
+    "static/media/bullet.svg": "/hotelBooking/static/media/bullet.2fe9326aa43902664b13.svg",
+    "main.3b90b7f6.css.map": "/hotelBooking/static/css/main.3b90b7f6.css.map",
+    "main.5e9accc4.js.map": "/hotelBooking/static/js/main.5e9accc4.js.map",
+    "787.85a7da5f.chunk.js.map": "/hotelBooking/static/js/787.85a7da5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b90b7f6.css",
+    "static/js/main.5e9accc4.js"
+  ]
+}
