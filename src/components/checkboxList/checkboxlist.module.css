@@ -13,13 +13,17 @@
 .dropdownHandler{
     display: flex;
     align-items: center;
-    background: url('../../assets/datePicker.svg') calc(100% - 20px) no-repeat;
     box-sizing: border-box;
     height: 44px;
     width: 100%;
+    margin-top: 10px;
 }
-.dropdownHandler.expanded{
-    background-image: url('../../assets/datePickerReverse.svg');
+.dropdownHandler > svg{
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+.dropdownHandler.expanded > svg{
+    transform: rotate(0deg);
 }
 .dropdown,
 .CheckboxContainer{

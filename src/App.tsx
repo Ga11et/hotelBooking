@@ -73,8 +73,6 @@ const App = () => {
   const [dates, setDates] = useState({start: null, end: null})
   const [guests, setGuests] = useState({first: 0, second: 0, third: 0})
 
-  
-
   return <>
     <Header isAuth={false} />
     <Routes>
@@ -89,7 +87,7 @@ const App = () => {
                                       images={roomImages} 
                                       impressions={{best: 130, good: 65, normal: 65, bad: 0, total: 260}}
                                       />} />
-      <Route path='*' element={<div>404</div>} />
+      <Route path='*' element={<Landing setDates={setDates} setGuests={setGuests} />} />
     </Routes>
     <Footer />
   </>

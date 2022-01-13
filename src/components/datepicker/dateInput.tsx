@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import css from './dateInput.module.css'
 import $ from 'jquery'
 import DatePicker, { registerLocale } from 'react-datepicker'

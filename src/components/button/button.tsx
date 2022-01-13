@@ -20,6 +20,16 @@ export const Button: FC<props> = ({ text, type, isSubmit, onClick }) => {
         onClick={onClick}
         type={isSubmit ? 'submit' : 'button'} >
         {text}
-        {type === 'big' && <img src={arrow} alt="arrow" />}
+        {type === 'big' && <svg viewBox="0 0 110 110" width={17} height={17}>
+                <polyline points="55,8 105,58, 105,58 55,108"
+                    stroke='white'
+                    strokeWidth="12"
+                    fill="none"
+                />
+                <line x1="0" y1="58" x2="100" y2="58"
+                    stroke='white'
+                    strokeWidth="12"
+                />
+            </svg>}
     </button>
 }

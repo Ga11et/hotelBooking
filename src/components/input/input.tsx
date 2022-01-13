@@ -40,29 +40,25 @@ export const Input: FC<props> = ({ name, title, fieldType, type, placeholder, on
                 className={css.masked} />
         </div>
     }
-    if (fieldType === 'subscribtion') return <div className={css.field}>
-        {title && <h3>{title}</h3>}
-        <input type={type}
-            readOnly={readonly}
-            placeholder={placeholder}
-            onClick={onClick && onClick}
-            onFocus={onFocus && onFocus}
-            id={id && id}
-            value={customValue}
-            className={css.subscribtion} />
-    </div>
-
     return <div className={css.field}>
         {title && <h3>{title}</h3>}
-        <input
-            readOnly={readonly}
-            placeholder={placeholder}
-            onClick={onClick && onClick}
-            onFocus={onFocus && onFocus}
-            id={id && id}
-            name={name}
-            value={customValue}
-            className={isWithIndicator ? css.withIndicator : undefined}
-        />
+        <label className={isWithIndicator ? css.withIndicator : undefined}>
+            <input
+                readOnly={readonly}
+                placeholder={placeholder}
+                onClick={onClick && onClick}
+                onFocus={onFocus && onFocus}
+                id={id && id}
+                name={name}
+                value={customValue}
+            />
+            <svg viewBox="0 0 110 65" width={12} height={8}>
+                <polyline points="5,58 55,8, 55,8 105,58"
+                    stroke="rgba(31, 32, 65, 0.5)"
+                    strokeWidth="15"
+                    fill="none"
+                />
+            </svg>
+        </label>
     </div>
 }

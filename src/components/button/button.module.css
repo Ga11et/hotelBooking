@@ -62,7 +62,7 @@
     justify-content: center;
     position: relative;
 }
-.payment > img{
+.payment > svg{
     position: absolute;
     right: 12px;
 }

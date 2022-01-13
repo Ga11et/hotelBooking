@@ -7,12 +7,15 @@
 .bulletListContainer .bullets{
     display: grid;
     grid-gap: 10px;
-    padding-inline-start: 15px;
+    padding-inline-start: 0px;
 }
 .bulletListContainer .bullet{
     font-size: 14px;
     line-height: 24px;
     color: var(--grey-75);
-    list-style-image: url('../../assets/bullet.svg');
-    padding-left: 10px;
+    list-style-type: none;
+}
+.bulletListContainer .bullet > svg{
+    padding-right:15px;
+    transform: translate(0, 1px);
 }

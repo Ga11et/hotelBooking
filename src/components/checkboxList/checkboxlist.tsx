@@ -35,6 +35,13 @@ export const CheckBoxList: FC<props> = ({ name, list, id, title, type, submitFor
                 id={id + 'handler'}
                 onClick={handlerOnClick} >
                 <h3>{title}</h3>
+                <svg viewBox="0 0 110 65" width={13} height={8}>
+                    <polyline points="5,58 55,8, 55,8 105,58"
+                        stroke="rgba(31, 32, 65, 0.5)"
+                        strokeWidth="16"
+                        fill="none"
+                    />
+                </svg>
             </div>
             <div className={css.dropdown}
                 style={{ display: 'none' }}

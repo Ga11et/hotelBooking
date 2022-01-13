@@ -21,6 +21,15 @@ type BulletProps = {
 
 const Bullet: FC<BulletProps> = ({ data }) => {
     return <li className={css.bullet}>
+        <svg viewBox="0 0 12 12" width={12} height={12}>
+            <circle 
+                r={5}
+                cx={6}
+                cy={6}
+                stroke="none"
+                fill="var(--grey-25)"
+            />
+        </svg>
         {data}
     </li>
 }

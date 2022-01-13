@@ -15,7 +15,20 @@ export const FieldRadioButton:FC<props> = ({ name, label, value }) => {
                 <input {...field} type='radio' value={value} />
             </>}
         </Field>
-        <span></span>
+        <span className={css.pseudo}>
+            <svg className={css.pseudoChecked}
+                viewBox="0 0 12 12"
+                width={15} height={15}    
+            >
+                <circle 
+                    r={5}
+                    cx={6}
+                    cy={6}
+                    stroke="none"
+                    fill="var(--purple)"
+                />
+            </svg>
+        </span>
         <p>{label}</p>
     </label>
 }

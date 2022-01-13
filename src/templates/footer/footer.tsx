@@ -6,9 +6,7 @@ import instagram from '../../assets/instagram.svg'
 import facebook from '../../assets/facebook.svg'
 import { SubscribtionForm } from "../../components/subscribeform/subscribeform";
 
-type props = {
-
-}
+type props = {}
 
 export const Footer: FC<props> = ({ }) => {
     return <footer className={css.footerContainer}>

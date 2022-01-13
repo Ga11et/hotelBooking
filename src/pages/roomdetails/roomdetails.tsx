@@ -8,7 +8,6 @@ import css from './roomdetails.module.css'
 import { PieChart } from 'react-minimal-pie-chart'
 
 type impressionsType = {best: number, good: number, normal: number, bad: number, total: number}
-type pieChartDataType = { value: number, color: string}
 type props = {
     images: string[]
     roomInfo: roomInfoDataType[]
@@ -21,10 +20,10 @@ type props = {
 export const RoomDetailsPage: FC<props> = ({ images, roomInfo, commentsData, rules, impressions }) => {
     
     let pieChartData = []
-    if (impressions.best != 0) {pieChartData.push({ value: impressions.best, color: '#FFE39C' })}
-    if (impressions.normal != 0) {pieChartData.push({ value: impressions.normal, color: '#BC9CFF' })}
-    if (impressions.good != 0) {pieChartData.push({ value: impressions.good, color: '#6FCF97' })}
-    if (impressions.bad != 0) {pieChartData.push({ value: impressions.bad, color: '#909090' })}
+    if (impressions.best !== 0) {pieChartData.push({ value: impressions.best, color: '#FFE39C' })}
+    if (impressions.normal !== 0) {pieChartData.push({ value: impressions.normal, color: '#BC9CFF' })}
+    if (impressions.good !== 0) {pieChartData.push({ value: impressions.good, color: '#6FCF97' })}
+    if (impressions.bad !== 0) {pieChartData.push({ value: impressions.bad, color: '#909090' })}
 
 
     return <main className={css.roomDetailsContainer}>
